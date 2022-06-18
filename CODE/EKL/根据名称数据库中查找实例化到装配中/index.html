@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>根据名称数据库中查找实例化到装配中 - Knowledge Base</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Knowledge Base</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">HOME</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CATIA <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../CATIA/V6%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="dropdown-item">V6 环境变量</a>
+</li>
+                                    
+<li>
+    <a href="../../../CATIA/%E8%A7%86%E5%9B%BE%E8%87%AA%E5%8A%A8%E6%97%8B%E8%BD%AC/" class="dropdown-item">视图自动旋转</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DEXPERIENCE 地形贴图</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/3DEXPERIENCE%20%E5%9C%B0%E5%BD%A2%E8%B4%B4%E5%9B%BE/3DEXPERIENCE%20%E5%9C%B0%E5%BD%A2%E8%B4%B4%E5%9B%BE/" class="dropdown-item">3DEXPERIENCE 地形贴图</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DEXPERIENCE查询文件大小</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/3DEXPERIENCE%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/3DEXPERIENCE%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/" class="dropdown-item">3DEXPERIENCE query file size</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APP CivilStructureDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/APP_CivilStructureDesign/CivilStrDesign/" class="dropdown-item">土木结构</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CATIA 开发问题答疑</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/CATIA%20%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91/CATIA%20%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91/" class="dropdown-item">CATIA 问题答疑</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">リソーステーブルの使い方の例（材料の自動適用)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E4%BE%8B%EF%BC%88%E6%9D%90%E6%96%99%E3%81%AE%E8%87%AA%E5%8B%95%E9%81%A9%E7%94%A8%29/%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E4%BE%8B%EF%BC%88%E6%9D%90%E6%96%99%E3%81%AE%E8%87%AA%E5%8B%95%E9%81%A9%E7%94%A8%EF%BC%89/" class="dropdown-item">リソーステーブルの使い方の例（材料の自動適用）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">如何去除KAC选定对象的默认标题</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4KAC%E9%80%89%E5%AE%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4KAC%E9%80%89%E5%AE%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98/" class="dropdown-item">如何去除KAC选定对象的默认标题</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">导入本地土木工程资源库</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%B5%84%E6%BA%90%E5%BA%93/%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%B5%84%E6%BA%90%E5%BA%93/" class="dropdown-item">导入本地土木工程资源库/Import local civil engineering resource library</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">导出V5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%AF%BC%E5%87%BAV5/ExportToV5/" class="dropdown-item">ExportToV5</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">批处理安装</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E6%89%B9%E5%A4%84%E7%90%86%E5%AE%89%E8%A3%85/V5_Installer/" class="dropdown-item">V5 Installer</a>
+</li>
+            
+<li>
+    <a href="../../../CATIA/%E6%89%B9%E5%A4%84%E7%90%86%E5%AE%89%E8%A3%85/V6_Installer/" class="dropdown-item">V6 Installer</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">服务器添加全局资源副本</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E5%89%AF%E6%9C%AC/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E5%89%AF%E6%9C%AC/" class="dropdown-item">服务器添加全局资源副本</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">管理达索的软件</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E7%AE%A1%E7%90%86%E8%BE%BE%E7%B4%A2%E7%9A%84%E8%BD%AF%E4%BB%B6/%E7%AE%A1%E7%90%86%E8%BE%BE%E7%B4%A2%E7%9A%84%E8%BD%AF%E4%BB%B6/" class="dropdown-item">Manage DS's software</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">获得CATIA日志</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E8%8E%B7%E5%BE%97CATIA%E6%97%A5%E5%BF%97/%E8%8E%B7%E5%BE%97CATIA%E6%97%A5%E5%BF%97/" class="dropdown-item">获得CATIA日志</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">通过网站访问模型</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9E%8B/%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9E%8B/" class="dropdown-item">通过网站访问模型</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">部署开发的组件</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%9A%84%E7%BB%84%E4%BB%B6/%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%9A%84%E7%BB%84%E4%BB%B6/" class="dropdown-item">如何部署APP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">首先项设置</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%A6%96%E5%85%88%E9%A1%B9%E8%AE%BE%E7%BD%AE/%E9%A6%96%E5%85%88%E9%A1%B9%E8%AE%BE%E7%BD%AE/" class="dropdown-item">首先项推荐设置</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CODE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">EKL</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Action%20%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9E%8B%E9%A2%9C%E8%89%B2/" class="dropdown-item">Action 修改模型颜色</a>
+</li>
+            
+<li>
+    <a href="../Create%20Progress%20Bar/" class="dropdown-item">Create Progress Bar</a>
+</li>
+            
+<li>
+    <a href="../EKL%20Excel/" class="dropdown-item">EKL Excel</a>
+</li>
+            
+<li>
+    <a href="../EKL%20Get%20point%20coordinate/" class="dropdown-item">EKL Get point coordinate</a>
+</li>
+            
+<li>
+    <a href="../EKL%20Instantiate%20template/" class="dropdown-item">EKL Instantiate template</a>
+</li>
+            
+<li>
+    <a href="../EKL%E8%AF%8D%E5%85%B8/" class="dropdown-item">EKL词典</a>
+</li>
+            
+<li>
+    <a href="../Get%20Volume/" class="dropdown-item">Get Volume</a>
+</li>
+            
+<li>
+    <a href="../How%20to%20know%20if%20an%20axis%20system%20is%20published%20in%20EKL/" class="dropdown-item">How to know if an axis system is published in EKL ?</a>
+</li>
+            
+<li>
+    <a href="../InstantiateTemplate%202/" class="dropdown-item">InstantiateTemplate 2</a>
+</li>
+            
+<li>
+    <a href="../KP%20Case/" class="dropdown-item">KP Case</a>
+</li>
+            
+<li>
+    <a href="../KP%20V5/" class="dropdown-item">KP V5</a>
+</li>
+            
+<li>
+    <a href="../KP%20V6%20Case%201/" class="dropdown-item">KP V6 Case 1</a>
+</li>
+            
+<li>
+    <a href="../KP%20V6%20Case%202/" class="dropdown-item">KP V6 Case 2</a>
+</li>
+            
+<li>
+    <a href="../KP-V6/" class="dropdown-item">KP</a>
+</li>
+            
+<li>
+    <a href="../KP_%E5%85%A8%E5%B1%80ARM/" class="dropdown-item">arm 资源全局设置</a>
+</li>
+            
+<li>
+    <a href="../ReadExcel/" class="dropdown-item">Read Excel</a>
+</li>
+            
+<li>
+    <a href="../tunnel/" class="dropdown-item">Tunnel</a>
+</li>
+            
+<li>
+    <a href="../udf%E4%BB%A5%E4%B8%8A%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%9C%E4%B8%BA%E5%8F%82%E8%80%83%E9%98%B5%E5%88%97/" class="dropdown-item">udf以上一个生成结果为参考阵列</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">根据名称数据库中查找实例化到装配中</a>
+</li>
+            
+<li>
+    <a href="../%E6%A0%B9%E6%8D%AE%E8%A1%A8%E6%A0%BC%E4%BF%AE%E6%94%B9%E5%AE%9E%E4%BE%8B%E5%90%8D%E7%A7%B0/" class="dropdown-item">根据表格修改实例名称</a>
+</li>
+            
+<li>
+    <a href="../%E8%8E%B7%E5%BE%97%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E7%82%B9/" class="dropdown-item">获得最短距离点</a>
+</li>
+            
+<li>
+    <a href="../%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E8%BD%B4%E7%B3%BB/" class="dropdown-item">表格生成轴系</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Creat Tree</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Creat%20Tree/Creat%20Tree/" class="dropdown-item">Creat Tree</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">寻找几何图形集下的特征</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%AF%BB%E6%89%BE%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2%E9%9B%86%E4%B8%8B%E7%9A%84%E7%89%B9%E5%BE%81/Find%20features%20under%20a%20geometry%20set/" class="dropdown-item">Find features under a geometry set</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GIT</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../GIT/git/" class="dropdown-item">Git 使用帮助</a>
+</li>
+            
+<li>
+    <a href="../../GIT/usefull/" class="dropdown-item">45 个 Git 经典操作场景，专治不会合代码</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Python/CreateShortcut/" class="dropdown-item">Create Shortcut</a>
+</li>
+            
+<li>
+    <a href="../../Python/Python%20Script%20in%20Engineering%20Rules%20Capture/" class="dropdown-item">Python Script in Engineering Rules Capture</a>
+</li>
+            
+<li>
+    <a href="../../Python/autocapimg/" class="dropdown-item">自动翻页截图</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CATIA Emb Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Python/CATIA-Emb-Python/python/" class="dropdown-item">Python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PythonAutomation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Python/PythonAutomation/PythonAutomation/" class="dropdown-item">Python Automation</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">VBA</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../VBA/CreateBridgeSkeleton/" class="dropdown-item">Create Bridge Skeleton</a>
+</li>
+            
+<li>
+    <a href="../../VBA/CreatePointFromExcel/" class="dropdown-item">CreatePointFromExcel</a>
+</li>
+            
+<li>
+    <a href="../../VBA/DRW_DIME/" class="dropdown-item">DRW_DIME</a>
+</li>
+            
+<li>
+    <a href="../../VBA/Delete2DEle/" class="dropdown-item">Delete2D Object</a>
+</li>
+            
+<li>
+    <a href="../../VBA/GENERATE_DRW_PRD/" class="dropdown-item">GENERATE DRW PRD</a>
+</li>
+            
+<li>
+    <a href="../../VBA/ModifyUDFParamaters/" class="dropdown-item">第二个UDF的参数取值为上一个UDF的某个值</a>
+</li>
+            
+<li>
+    <a href="../../VBA/RenameTheDrawing/" class="dropdown-item">RenameTheDrawing</a>
+</li>
+            
+<li>
+    <a href="../../VBA/VBACallExE/" class="dropdown-item">vba call exe</a>
+</li>
+            
+<li>
+    <a href="../../VBA/%E6%9B%B4%E6%96%B0%E5%8F%82%E6%95%B0%E5%AF%BC%E5%87%BA%E6%88%AA%E5%9B%BE/" class="dropdown-item">更新参数导出截图</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">WIN</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../WIN/CMD%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%20xcopy/" class="dropdown-item">CMD文件复制 xcopy</a>
+</li>
+            
+<li>
+    <a href="../../WIN/CMD%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="dropdown-item">CMD install apps</a>
+</li>
+            
+<li>
+    <a href="../../WIN/GetFileName/" class="dropdown-item">打印所有文件名\print-file-name</a>
+</li>
+            
+<li>
+    <a href="../../WIN/GetMD5/" class="dropdown-item">获得文件的MD5码</a>
+</li>
+            
+<li>
+    <a href="../../WIN/UsefullApps/" class="dropdown-item">常用软件安装</a>
+</li>
+            
+<li>
+    <a href="../../WIN/%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%9B%91%E8%A7%86%E5%99%A8/" class="dropdown-item">查看系统监视器</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DIGITAL DESIGN <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kaleidoscope</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../DIGITAL-DESIGN/kaleidoscope/kaleidoscope/" class="dropdown-item">Kaleidoscope</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ENOVIA <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../ENOVIA/CleanNativeAppsCache/" class="dropdown-item">Clean native apps cache 清理缓存</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/Reset%20database%20password/" class="dropdown-item">重置数据库密码/Reset database password</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/rebuild%20search%20index/" class="dropdown-item">重建索引/Rebuild search index</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/%E9%87%8D%E7%BD%AE3DPassport%E9%87%8C%E9%9D%A2%E7%9A%84%E5%AF%86%E7%A0%81/" class="dropdown-item">重置3DPassport里面的密码/Reset password for 3dpassport</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Manage space permissions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/Manage%20space%20permissions/%E7%AE%A1%E7%90%86%E7%A9%BA%E9%97%B4%E6%9D%83%E9%99%90/" class="dropdown-item">管理空间权限/Manage space permissions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux r2022x</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/linux-r2022x/linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">平台部署</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/V6R2021x%20Platform%20Installation/" class="dropdown-item">V6R2021x Platform Installation</a>
+</li>
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/V6R2022x%20Platform%20Installation/" class="dropdown-item">V6R2022x Platform Installation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DPassport</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/3DPassport/3DPassport/" class="dropdown-item">3DPassport</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">移除license</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E7%A7%BB%E9%99%A4license/remove%20license/" class="dropdown-item">移除license</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">远程访问  Windows server 服务器</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%20%20Windows%20server%20%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%20%20Windows%20server%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="dropdown-item">远程访问  Windows server 服务器</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ISE AEC <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC FacadeResearch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ARC-FacadeResearch/facade%20research/" class="dropdown-item">Facade Research</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC Generali Tower</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ARC-Generali%20Tower/GenerailTower/" class="dropdown-item">GenerailTower</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC New Google Headquarters</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ARC-New%20Google%20Headquarters/New%20Google%20Headquarters/" class="dropdown-item">幕墙-New Google Headquarters</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">BRIDGE 小箱梁的自动删除</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/BRIDGE-%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/" class="dropdown-item">小箱梁的自动删除</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CASE 同济市路线数据转换</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/CASE-%E5%90%8C%E6%B5%8E%E5%B8%82%E8%B7%AF%E7%BA%BF%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/TJAD-%E5%90%8C%E6%B5%8E%E5%B8%82%E6%94%BF%E9%99%A2%E5%9F%BA%E4%BA%8E%E8%BE%BE%E7%B4%A2%E7%B3%BB%E7%BB%9F3DEXPERIENCE%E5%B9%B3%E5%8F%B0%E7%9A%84%E4%BA%8C%E4%B8%89%E7%BB%B4%E8%B7%AF%E7%BA%BF%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" class="dropdown-item">同济市政院基于达索系统3DEXPERIENCE平台的二三维路线数据转换程序开发</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CIV Tunnel R&D Process</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/CIV-Tunnel%20R%26D%20Process/Tunnel%20R%26D%20Process/" class="dropdown-item">隧道创建/Tunnel R&D Process</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ISE 钢结构</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ISE-%E9%92%A2%E7%BB%93%E6%9E%84/%E9%92%A2%E7%BB%93%E6%9E%84%E6%A2%81/" class="dropdown-item">钢结构梁建模思考</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">SLN drafting</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/SLN-drafting/%E5%87%BA%E5%9B%BE/" class="dropdown-item">出图/Drafting Q&A</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../udf%E4%BB%A5%E4%B8%8A%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%9C%E4%B8%BA%E5%8F%82%E8%80%83%E9%98%B5%E5%88%97/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../%E6%A0%B9%E6%8D%AE%E8%A1%A8%E6%A0%BC%E4%BF%AE%E6%94%B9%E5%AE%9E%E4%BE%8B%E5%90%8D%E7%A7%B0/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">根据名称数据库中查找实例化到装配中</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">根据名称数据库中查找实例化到装配中</h1>
+<pre><code class="language-CPP">let root (VPMReference)
+let query (PLMQuery)
+let queryResults (List)
+let queryResult (PLMQueryResult)
+let resultReference (VPMReference)
+let newInstance (VPMInstance)
+let newInstanceName (String)
+//Get root of current editor
+root = GetEditorRoots(&quot;VPMReference&quot;).GetItem(1)
+//Build the PLM Query
+query = CreatePLMQuery(&quot;VPMReference&quot;)
+query.AddCriterion(&quot;V_Name&quot;, &quot;Plate_A&quot;)
+queryResults = query.RunQuery()
+//Check if the query returned results
+if (queryResults.Size() &gt; 0)
+{   
+    //Return the first item in the list of query results
+    queryResult = queryResults[1]
+//LoadResult() method returns Feature type, set resultReference to cast Feature to VPMReference type
+    set resultReference = queryResult.LoadResult(true)
+//Create new instance of returned reference in tree
+    newInstance = new(&quot;VPMInstance&quot;, &quot;Instance_1&quot;, root, resultReference)
+}
+
+</code></pre>
+<pre><code class="language-cpp">//数据库中查找并按轴系装配
+
+let root (VPMReference)
+let query (PLMQuery)
+let queryResults (List)
+let queryResult (PLMQueryResult)
+let resultReference (VPMReference)
+let newInstance (VPMInstance)
+let newInstanceName (String)
+//Get root of current editor
+root = GetEditorRoots(&quot;VPMReference&quot;).GetItem(1)
+//Build the PLM Query
+query = CreatePLMQuery(&quot;VPMReference&quot;)
+//Add query criteria, any attributes can be used to ensure correct part is retrieved
+query.AddCriterion(&quot;V_Name&quot;, &quot;Demo_ManageInstance_Bkt_C&quot;)
+query.AddCriterion(&quot;V_isLastVersion&quot;, &quot;TRUE&quot;)
+queryResults = query.RunQuery()
+//Check if the query returned results
+if (queryResults.Size() &gt; 0)
+{   
+//Return the first item in the list of query results
+    queryResult = queryResults[1]
+//LoadResult() method returns Feature type, set resultReference to cast Feature to VPMReference type
+    set resultReference = queryResult.LoadResult(true)
+}
+//Create and constrain instances to target axes
+let targetAxesGeoset (OpenBodyFeature)
+let targetAxis, refAxis (AxisSystem)
+let targetAxes (List)
+let targetAxisPath, refAxisPath (String)
+let coincidenceConstraint (MRXCoincidence)
+let i (Integer)
+targetAxesGeoset = root.Find(&quot;OpenBodyFeature&quot;, &quot;x.Name == \&quot;PositionAxes\&quot;&quot;, true)
+targetAxes = targetAxesGeoset.Query(&quot;AxisSystem&quot;, &quot;&quot;)
+i = 1
+for targetAxis inside targetAxes
+{
+    newInstance = new(&quot;VPMInstance&quot;, &quot;Instance_&quot; + ToString(i), root, resultReference)  
+    refAxis = newInstance.Access(&quot;EngAxis&quot;, &quot;AxisSystem&quot;)
+    refAxisPath = root.CreatePathString(newInstance, refAxis)
+    targetAxisPath = root.CreatePathString(NULL, targetAxis)
+    coincidenceConstraint = root.CreateConstraint(&quot;Coincidence_&quot; + ToString(i), &quot;Coincidence&quot;, refAxisPath, targetAxisPath)
+i = i +1
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>同济市政院基于达索系统3DEXPERIENCE平台的二三维路线数据转换程序开发 - Knowledge Base</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Knowledge Base</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">HOME</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CATIA <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../CATIA/V6%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="dropdown-item">V6 环境变量</a>
+</li>
+                                    
+<li>
+    <a href="../../../CATIA/%E8%A7%86%E5%9B%BE%E8%87%AA%E5%8A%A8%E6%97%8B%E8%BD%AC/" class="dropdown-item">视图自动旋转</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DEXPERIENCE 地形贴图</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/3DEXPERIENCE%20%E5%9C%B0%E5%BD%A2%E8%B4%B4%E5%9B%BE/3DEXPERIENCE%20%E5%9C%B0%E5%BD%A2%E8%B4%B4%E5%9B%BE/" class="dropdown-item">3DEXPERIENCE 地形贴图</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DEXPERIENCE查询文件大小</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/3DEXPERIENCE%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/3DEXPERIENCE%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/" class="dropdown-item">3DEXPERIENCE query file size</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APP CivilStructureDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/APP_CivilStructureDesign/CivilStrDesign/" class="dropdown-item">土木结构</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CATIA 开发问题答疑</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/CATIA%20%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91/CATIA%20%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91/" class="dropdown-item">CATIA 问题答疑</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">リソーステーブルの使い方の例（材料の自動適用)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E4%BE%8B%EF%BC%88%E6%9D%90%E6%96%99%E3%81%AE%E8%87%AA%E5%8B%95%E9%81%A9%E7%94%A8%29/%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E4%BE%8B%EF%BC%88%E6%9D%90%E6%96%99%E3%81%AE%E8%87%AA%E5%8B%95%E9%81%A9%E7%94%A8%EF%BC%89/" class="dropdown-item">リソーステーブルの使い方の例（材料の自動適用）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">如何去除KAC选定对象的默认标题</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4KAC%E9%80%89%E5%AE%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4KAC%E9%80%89%E5%AE%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98/" class="dropdown-item">如何去除KAC选定对象的默认标题</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">导入本地土木工程资源库</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%B5%84%E6%BA%90%E5%BA%93/%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%B5%84%E6%BA%90%E5%BA%93/" class="dropdown-item">导入本地土木工程资源库/Import local civil engineering resource library</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">导出V5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%AF%BC%E5%87%BAV5/ExportToV5/" class="dropdown-item">ExportToV5</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">批处理安装</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E6%89%B9%E5%A4%84%E7%90%86%E5%AE%89%E8%A3%85/V5_Installer/" class="dropdown-item">V5 Installer</a>
+</li>
+            
+<li>
+    <a href="../../../CATIA/%E6%89%B9%E5%A4%84%E7%90%86%E5%AE%89%E8%A3%85/V6_Installer/" class="dropdown-item">V6 Installer</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">服务器添加全局资源副本</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E5%89%AF%E6%9C%AC/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E5%89%AF%E6%9C%AC/" class="dropdown-item">服务器添加全局资源副本</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">管理达索的软件</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E7%AE%A1%E7%90%86%E8%BE%BE%E7%B4%A2%E7%9A%84%E8%BD%AF%E4%BB%B6/%E7%AE%A1%E7%90%86%E8%BE%BE%E7%B4%A2%E7%9A%84%E8%BD%AF%E4%BB%B6/" class="dropdown-item">Manage DS's software</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">获得CATIA日志</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E8%8E%B7%E5%BE%97CATIA%E6%97%A5%E5%BF%97/%E8%8E%B7%E5%BE%97CATIA%E6%97%A5%E5%BF%97/" class="dropdown-item">获得CATIA日志</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">通过网站访问模型</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9E%8B/%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9E%8B/" class="dropdown-item">通过网站访问模型</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">部署开发的组件</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%9A%84%E7%BB%84%E4%BB%B6/%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%9A%84%E7%BB%84%E4%BB%B6/" class="dropdown-item">如何部署APP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">首先项设置</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%A6%96%E5%85%88%E9%A1%B9%E8%AE%BE%E7%BD%AE/%E9%A6%96%E5%85%88%E9%A1%B9%E8%AE%BE%E7%BD%AE/" class="dropdown-item">首先项推荐设置</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CODE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">EKL</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/EKL/Action%20%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9E%8B%E9%A2%9C%E8%89%B2/" class="dropdown-item">Action 修改模型颜色</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/Create%20Progress%20Bar/" class="dropdown-item">Create Progress Bar</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/EKL%20Excel/" class="dropdown-item">EKL Excel</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/EKL%20Get%20point%20coordinate/" class="dropdown-item">EKL Get point coordinate</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/EKL%20Instantiate%20template/" class="dropdown-item">EKL Instantiate template</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/EKL%E8%AF%8D%E5%85%B8/" class="dropdown-item">EKL词典</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/Get%20Volume/" class="dropdown-item">Get Volume</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/How%20to%20know%20if%20an%20axis%20system%20is%20published%20in%20EKL/" class="dropdown-item">How to know if an axis system is published in EKL ?</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/InstantiateTemplate%202/" class="dropdown-item">InstantiateTemplate 2</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/KP%20Case/" class="dropdown-item">KP Case</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/KP%20V5/" class="dropdown-item">KP V5</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/KP%20V6%20Case%201/" class="dropdown-item">KP V6 Case 1</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/KP%20V6%20Case%202/" class="dropdown-item">KP V6 Case 2</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/KP-V6/" class="dropdown-item">KP</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/KP_%E5%85%A8%E5%B1%80ARM/" class="dropdown-item">arm 资源全局设置</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/ReadExcel/" class="dropdown-item">Read Excel</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/tunnel/" class="dropdown-item">Tunnel</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/udf%E4%BB%A5%E4%B8%8A%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%9C%E4%B8%BA%E5%8F%82%E8%80%83%E9%98%B5%E5%88%97/" class="dropdown-item">udf以上一个生成结果为参考阵列</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/%E6%A0%B9%E6%8D%AE%E5%90%8D%E7%A7%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%88%B0%E8%A3%85%E9%85%8D%E4%B8%AD/" class="dropdown-item">根据名称数据库中查找实例化到装配中</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/%E6%A0%B9%E6%8D%AE%E8%A1%A8%E6%A0%BC%E4%BF%AE%E6%94%B9%E5%AE%9E%E4%BE%8B%E5%90%8D%E7%A7%B0/" class="dropdown-item">根据表格修改实例名称</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/%E8%8E%B7%E5%BE%97%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E7%82%B9/" class="dropdown-item">获得最短距离点</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/EKL/%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E8%BD%B4%E7%B3%BB/" class="dropdown-item">表格生成轴系</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Creat Tree</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/EKL/Creat%20Tree/Creat%20Tree/" class="dropdown-item">Creat Tree</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">寻找几何图形集下的特征</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/EKL/%E5%AF%BB%E6%89%BE%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2%E9%9B%86%E4%B8%8B%E7%9A%84%E7%89%B9%E5%BE%81/Find%20features%20under%20a%20geometry%20set/" class="dropdown-item">Find features under a geometry set</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GIT</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/GIT/git/" class="dropdown-item">Git 使用帮助</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/GIT/usefull/" class="dropdown-item">45 个 Git 经典操作场景，专治不会合代码</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/Python/CreateShortcut/" class="dropdown-item">Create Shortcut</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/Python/Python%20Script%20in%20Engineering%20Rules%20Capture/" class="dropdown-item">Python Script in Engineering Rules Capture</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/Python/autocapimg/" class="dropdown-item">自动翻页截图</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CATIA Emb Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/Python/CATIA-Emb-Python/python/" class="dropdown-item">Python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PythonAutomation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/Python/PythonAutomation/PythonAutomation/" class="dropdown-item">Python Automation</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">VBA</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/VBA/CreateBridgeSkeleton/" class="dropdown-item">Create Bridge Skeleton</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/CreatePointFromExcel/" class="dropdown-item">CreatePointFromExcel</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/DRW_DIME/" class="dropdown-item">DRW_DIME</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/Delete2DEle/" class="dropdown-item">Delete2D Object</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/GENERATE_DRW_PRD/" class="dropdown-item">GENERATE DRW PRD</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/ModifyUDFParamaters/" class="dropdown-item">第二个UDF的参数取值为上一个UDF的某个值</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/RenameTheDrawing/" class="dropdown-item">RenameTheDrawing</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/VBACallExE/" class="dropdown-item">vba call exe</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/VBA/%E6%9B%B4%E6%96%B0%E5%8F%82%E6%95%B0%E5%AF%BC%E5%87%BA%E6%88%AA%E5%9B%BE/" class="dropdown-item">更新参数导出截图</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">WIN</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CODE/WIN/CMD%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%20xcopy/" class="dropdown-item">CMD文件复制 xcopy</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/WIN/CMD%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="dropdown-item">CMD install apps</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/WIN/GetFileName/" class="dropdown-item">打印所有文件名\print-file-name</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/WIN/GetMD5/" class="dropdown-item">获得文件的MD5码</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/WIN/UsefullApps/" class="dropdown-item">常用软件安装</a>
+</li>
+            
+<li>
+    <a href="../../../CODE/WIN/%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%9B%91%E8%A7%86%E5%99%A8/" class="dropdown-item">查看系统监视器</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DIGITAL DESIGN <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kaleidoscope</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../DIGITAL-DESIGN/kaleidoscope/kaleidoscope/" class="dropdown-item">Kaleidoscope</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ENOVIA <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../ENOVIA/CleanNativeAppsCache/" class="dropdown-item">Clean native apps cache 清理缓存</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/Reset%20database%20password/" class="dropdown-item">重置数据库密码/Reset database password</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/rebuild%20search%20index/" class="dropdown-item">重建索引/Rebuild search index</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/%E9%87%8D%E7%BD%AE3DPassport%E9%87%8C%E9%9D%A2%E7%9A%84%E5%AF%86%E7%A0%81/" class="dropdown-item">重置3DPassport里面的密码/Reset password for 3dpassport</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Manage space permissions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/Manage%20space%20permissions/%E7%AE%A1%E7%90%86%E7%A9%BA%E9%97%B4%E6%9D%83%E9%99%90/" class="dropdown-item">管理空间权限/Manage space permissions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux r2022x</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/linux-r2022x/linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">平台部署</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/V6R2021x%20Platform%20Installation/" class="dropdown-item">V6R2021x Platform Installation</a>
+</li>
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/V6R2022x%20Platform%20Installation/" class="dropdown-item">V6R2022x Platform Installation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DPassport</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/3DPassport/3DPassport/" class="dropdown-item">3DPassport</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">移除license</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E7%A7%BB%E9%99%A4license/remove%20license/" class="dropdown-item">移除license</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">远程访问  Windows server 服务器</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%20%20Windows%20server%20%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%20%20Windows%20server%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="dropdown-item">远程访问  Windows server 服务器</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ISE AEC <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC FacadeResearch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ARC-FacadeResearch/facade%20research/" class="dropdown-item">Facade Research</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC Generali Tower</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ARC-Generali%20Tower/GenerailTower/" class="dropdown-item">GenerailTower</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC New Google Headquarters</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ARC-New%20Google%20Headquarters/New%20Google%20Headquarters/" class="dropdown-item">幕墙-New Google Headquarters</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">BRIDGE 小箱梁的自动删除</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../BRIDGE-%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/" class="dropdown-item">小箱梁的自动删除</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CASE 同济市路线数据转换</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">同济市政院基于达索系统3DEXPERIENCE平台的二三维路线数据转换程序开发</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CIV Tunnel R&D Process</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CIV-Tunnel%20R%26D%20Process/Tunnel%20R%26D%20Process/" class="dropdown-item">隧道创建/Tunnel R&D Process</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ISE 钢结构</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ISE-%E9%92%A2%E7%BB%93%E6%9E%84/%E9%92%A2%E7%BB%93%E6%9E%84%E6%A2%81/" class="dropdown-item">钢结构梁建模思考</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">SLN drafting</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../SLN-drafting/%E5%87%BA%E5%9B%BE/" class="dropdown-item">出图/Drafting Q&A</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../BRIDGE-%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../CIV-Tunnel%20R%26D%20Process/Tunnel%20R%26D%20Process/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#3dexperience" class="nav-link">同济市政院基于达索系统3DEXPERIENCE平台的二三维路线数据转换程序开发</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">摘要</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">引言</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ifc" class="nav-link">数据流转新范式：基于IFC标准的路线信息模型</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#eicadifcalignment" class="nav-link">以小见大，初窥神威：EICAD数据与IfcAlignment的转换</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">结语</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="3dexperience">同济市政院基于达索系统3DEXPERIENCE平台的二三维路线数据转换程序开发</h1>
+<h2 id="_1">摘要</h2>
+<p>为了改善二三维路线数据的交互方式，同济市政院提出了一种基于IFC 4.1（industry foundation classes，工业基础类）标准的路线数据转换方法，并以EICAD为例进行了功能开发。鉴于达索系统对IFC 4.1格式的良好兼容性，采用3DEXPERIENCE R2019x平台来验证方法的可行性。</p>
+<p>结果表明：我院自主开发的路线转换程序能够实现将EICAD平竖曲线设计文件转换为IFC路线文件，且在导入3DEXPERIENCE平台后可以较为完整地还原路线设计信息，与传统基于DWG文件的交互方式相比，能够在保证路线精度和软件兼容性的条件下，实现路线数据与3DEXPERIENCE平台间的有效传递。相关成果已发表在《清华大学学报(自然科学版)》。</p>
+<ul>
+<li>
+<p>关键词：工业基础类(IFC 4.1)、EICAD、路线信息、平竖曲线、数据转换、xBIM</p>
+</li>
+<li>
+<p>成果论文：曹炳勇, 施新欣. 基于IFC 4.1标准的EICAD路线数据转换方法 [J]. 清华大学学报(自然科学版), 2022, 62(02): 321-330.</p>
+</li>
+<li>
+<p>论文链接：
+http://jst.tsinghuajournals.com/article/2022/4306/20220216.htm</p>
+</li>
+</ul>
+<h2 id="_2">引言</h2>
+<p>市政勘察设计行业正处于由二维设计向三维设计转型升级的摸索阶段。对于线性工程而言，路线信息是最为基础的设计要素之一，也是多专业协同的核心数据。然而BIM技术在线性工程中应用的普及度和成熟度远不及建筑工程，三维路线设计模式推广缓慢，一方面现行路线设计规范对路线的平竖曲线有明确规定，即使采用三维路线设计软件也需要在平面和纵断面上分别进行设计，再转换为三维路线；另一方面现有的二维路线设计软件具有功能完善、易用性好、设计效率高等优势，而当前通用的BIM软件并不提供路线设计模块，需要设计企业通过二次开发来实现这部分功能，开发成本较高。此外，在城市信息化建设的背景下，大量已建的线性工程亟需将二维成果数据向三维BIM数据转换。因此，利用数据格式转换实现路线信息与BIM软件的无缝衔接具有重要的实际应用价值。</p>
+<p>BIM异构数据以及“信息孤岛”问题严重制约了二三维应用软件之间的信息共享和协同工作，导致路线信息在传递过程中出现数据丢失或失真的现象。IFC作为一种国际化的BIM数据标准，提供了一个不依赖于任何具体系统的，机器可读的，适合于描述贯穿整个建筑生命期内产品数据的中性机制，并因此得到了大量BIM应用软件的支持。但在路线设计领域应用较为广泛的EICAD软件仍不支持IFC数据格式的输出，因此现有的工作流只能采用基于DWG文件的路线数据交互方式，该方式下仅能传递路线的几何信息，且存在缓和曲线绘制不精确，平竖曲线信息丢失等问题。鉴于上述问题，通过研究IFC标准框架，自主开发程序实现EICAD路线数据导出为IFC数据的思路已然成为一种可行的技术方案。</p>
+<h2 id="ifc">数据流转新范式：基于IFC标准的路线信息模型</h2>
+<h3 id="ifc_1">IFC标准概述</h3>
+<p>IFC作为实现BIM全生命周期理念的重要工具，是一种面向建筑领域的数据表达和交换标准。它由国际协同工作联盟IAI（已更名为buildingSMART）于二十世纪九十年代开始起草并更新迭代至今，当前最新版本为IFC4.3 RC2。长期以来，该标准主要致力于建筑领域信息表达的标准化工作，而自IFC 4.1版本开始，buildingSMART组织逐步将IFC标准延伸至基础设施领域，包括道路、铁路、桥梁、隧道等线性工程均在此版本之后得到了不同程度的支持，其显著特征在于IFC 4.1标准版本中新增了IfcAlignment实体，可用于描述线性基础设施工程中的路线信息。</p>
+<p><img alt="" src="../img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220317111608.png" /></p>
+<p>在IFC 4.1之后的迭代版本中，IFC 4.2引入IfcBridge和IfcBridgePart实体，由此展开对桥梁结构的描述，其中还涵盖了对支座、深基础和预应力管道等离散构件的定义；而IFC 4.3则进一步加大对基础设施领域的覆盖，引入IfcPort、IfcRailway和IfcRoad实体，并新增标识牌、信号设备、填挖方以及铺装等一系列基础设施相关的实体概念，同时优化了路线的语义化表达，将横断面轮廓和横坡信息纳入路线的标准化表达范畴。</p>
+<h3 id="ifc-41">基于IFC 4.1标准的路线信息模型</h3>
+<p>虽然主流的BIM核心建模软件均已支持IFC标准，但其更新速度往往比较滞后，目前绝大多数BIM应用软件最高支持IFC 4.1版本，因此本研究以IFC 4.1版本的文件格式作为路线转换的目标格式。</p>
+<p>图1为基于IFC标准的路线信息模型。正如前文所述，IFC标准中使用IfcAlignment实体表示路线信息，IfcProject和IfcSite则分别代表项目信息和场地信息。IfcAlignment实体的路线几何信息由Axis属性表达，即IfcAlignmentCurve实体，该实体中Horizontal和Vertical属性分别对应路线信息中的平曲线和竖曲线。IFC标准中的线元类别与我国现行的公路路线设计规范（JTG D20-2017）一致。平竖曲线线元实体的属性继承如图2所示。对于国内推荐线元存在差异的情况，需对线元属性进行相应设置以适应本土化需求。具体设置解析详见成果论文。</p>
+<p>图1 基于IFC标准的路线信息模型
+<img alt="" src="../img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220317111651.png" /></p>
+<p>图2 IFC线元实体属性继承图
+<img alt="" src="../img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220317111656.png" /></p>
+<h2 id="eicadifcalignment">以小见大，初窥神威：EICAD数据与IfcAlignment的转换</h2>
+<h3 id="eicad">EICAD数据解析</h3>
+<p>EICAD是一款基于AutoCAD平台的集成交互式道路与立交设计软件，其路线设计成果可导出为相应的文本文件进行存储和传递，其中包括交点设计文件<em>.JD、积木法线元单元文件</em>.ICD、竖曲线文件<em>.SQX以及桩号断链文件</em>.DL等。对于平曲线而言，EICAD提供了交点法和积木法两种输出方式，而IFC标准中的路线表达则采用的是线元法的思想，与积木法类似，所以本文仅以ICD文件作为平曲线的成果文件展开研究，具体论述详见成果论文。
+图3 EICAD实例文件
+<img alt="" src="../img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220317111700.png" /></p>
+<p>表1 EICAD与IFC线元描述对照表
+<img alt="" src="../img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220317111704.png" /></p>
+<h3 id="ifc_2">IFC线元属性值映射</h3>
+<p>对比EICAD路线输出文件（图3）与IFC线元实体属性继承（图2），不难发现两者均通过记录路线线型单元的几何特征数据来描述路线信息，因此在线元参数方面存在一些交集。但是，正如前文所述，基于积木法和交点法的路线设计思路大大简化了EICAD平竖曲线的文件数据，而IFC路线信息的描述方式虽采用了线元法的设计理念，但各个线元的参数表达更加完整（表2），即每个线型单元可独立存在，因此在数据映射过程中，需要经过公式换算才能获得完整的IFC线元属性值，具体公式见成果论文。</p>
+<p>表2 EICAD线元参数与IFC线元属性的对比
+<img alt="" src="../img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220317111707.png" /></p>
+<h3 id="_3">程序实现与应用案例</h3>
+<p>为了验证上述方法的可行性，我院自主开发了基于IFC 4.1标准的EICAD路线数据转换程序，该程序主要分为3个模块：①输入模块，该模块用于输入EICAD平竖曲线设计文件以及断链设计文件；②数据转换模块，是程序的核心部分，承担对输入数据的反序列化和参数映射的任务；③输出模块，该模块借助于xBIM解析工具包实现IFC实体的创建、属性赋值以及数据导出的功能。</p>
+<p>采用3DEXPERIENCE R2019x对导出的IFC文件进行验证，该软件支持IFC 4.1路线导入功能。在测试过程中，程序能够快速地完成数据转换工作。将转换后的IFC文件导入CATIA软件后的可视化效果如图4所示。结果表明CATIA能够准确地识别出IFC路线信息，并在结构树中保留平竖曲线的定义，且生成的路线具有可编辑性。</p>
+<p><img alt="" src="../img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220317111711.png" /></p>
+<p>图4 IFC路线导入结果</p>
+<h2 id="_4">结语</h2>
+<p>我院所开发的路线数据转换程序解决了利用达索系统3DEXPERIENCE平台进行二三维协同设计时路线数据无法有效传递的问题，具有精度高、兼容性强、高度集成等优点，且能够较为完整地还原路线设计信息，对推进线性工程项目的正向设计和基于BIM模型的路线设计合规审查具有重要意义</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

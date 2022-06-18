@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>45 个 Git 经典操作场景，专治不会合代码 - Knowledge Base</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Knowledge Base</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">HOME</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CATIA <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../CATIA/V6%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="dropdown-item">V6 环境变量</a>
+</li>
+                                    
+<li>
+    <a href="../../../CATIA/%E8%A7%86%E5%9B%BE%E8%87%AA%E5%8A%A8%E6%97%8B%E8%BD%AC/" class="dropdown-item">视图自动旋转</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DEXPERIENCE 地形贴图</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/3DEXPERIENCE%20%E5%9C%B0%E5%BD%A2%E8%B4%B4%E5%9B%BE/3DEXPERIENCE%20%E5%9C%B0%E5%BD%A2%E8%B4%B4%E5%9B%BE/" class="dropdown-item">3DEXPERIENCE 地形贴图</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DEXPERIENCE查询文件大小</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/3DEXPERIENCE%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/3DEXPERIENCE%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/" class="dropdown-item">3DEXPERIENCE query file size</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APP CivilStructureDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/APP_CivilStructureDesign/CivilStrDesign/" class="dropdown-item">土木结构</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CATIA 开发问题答疑</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/CATIA%20%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91/CATIA%20%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91/" class="dropdown-item">CATIA 问题答疑</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">リソーステーブルの使い方の例（材料の自動適用)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E4%BE%8B%EF%BC%88%E6%9D%90%E6%96%99%E3%81%AE%E8%87%AA%E5%8B%95%E9%81%A9%E7%94%A8%29/%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E4%BE%8B%EF%BC%88%E6%9D%90%E6%96%99%E3%81%AE%E8%87%AA%E5%8B%95%E9%81%A9%E7%94%A8%EF%BC%89/" class="dropdown-item">リソーステーブルの使い方の例（材料の自動適用）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">如何去除KAC选定对象的默认标题</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4KAC%E9%80%89%E5%AE%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4KAC%E9%80%89%E5%AE%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98/" class="dropdown-item">如何去除KAC选定对象的默认标题</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">导入本地土木工程资源库</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%B5%84%E6%BA%90%E5%BA%93/%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%B5%84%E6%BA%90%E5%BA%93/" class="dropdown-item">导入本地土木工程资源库/Import local civil engineering resource library</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">导出V5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E5%AF%BC%E5%87%BAV5/ExportToV5/" class="dropdown-item">ExportToV5</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">批处理安装</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E6%89%B9%E5%A4%84%E7%90%86%E5%AE%89%E8%A3%85/V5_Installer/" class="dropdown-item">V5 Installer</a>
+</li>
+            
+<li>
+    <a href="../../../CATIA/%E6%89%B9%E5%A4%84%E7%90%86%E5%AE%89%E8%A3%85/V6_Installer/" class="dropdown-item">V6 Installer</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">服务器添加全局资源副本</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E5%89%AF%E6%9C%AC/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E5%89%AF%E6%9C%AC/" class="dropdown-item">服务器添加全局资源副本</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">管理达索的软件</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E7%AE%A1%E7%90%86%E8%BE%BE%E7%B4%A2%E7%9A%84%E8%BD%AF%E4%BB%B6/%E7%AE%A1%E7%90%86%E8%BE%BE%E7%B4%A2%E7%9A%84%E8%BD%AF%E4%BB%B6/" class="dropdown-item">Manage DS's software</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">获得CATIA日志</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E8%8E%B7%E5%BE%97CATIA%E6%97%A5%E5%BF%97/%E8%8E%B7%E5%BE%97CATIA%E6%97%A5%E5%BF%97/" class="dropdown-item">获得CATIA日志</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">通过网站访问模型</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9E%8B/%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9E%8B/" class="dropdown-item">通过网站访问模型</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">部署开发的组件</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%9A%84%E7%BB%84%E4%BB%B6/%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%9A%84%E7%BB%84%E4%BB%B6/" class="dropdown-item">如何部署APP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">首先项设置</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../CATIA/%E9%A6%96%E5%85%88%E9%A1%B9%E8%AE%BE%E7%BD%AE/%E9%A6%96%E5%85%88%E9%A1%B9%E8%AE%BE%E7%BD%AE/" class="dropdown-item">首先项推荐设置</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CODE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">EKL</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../EKL/Action%20%E4%BF%AE%E6%94%B9%E6%A8%A1%E5%9E%8B%E9%A2%9C%E8%89%B2/" class="dropdown-item">Action 修改模型颜色</a>
+</li>
+            
+<li>
+    <a href="../../EKL/Create%20Progress%20Bar/" class="dropdown-item">Create Progress Bar</a>
+</li>
+            
+<li>
+    <a href="../../EKL/EKL%20Excel/" class="dropdown-item">EKL Excel</a>
+</li>
+            
+<li>
+    <a href="../../EKL/EKL%20Get%20point%20coordinate/" class="dropdown-item">EKL Get point coordinate</a>
+</li>
+            
+<li>
+    <a href="../../EKL/EKL%20Instantiate%20template/" class="dropdown-item">EKL Instantiate template</a>
+</li>
+            
+<li>
+    <a href="../../EKL/EKL%E8%AF%8D%E5%85%B8/" class="dropdown-item">EKL词典</a>
+</li>
+            
+<li>
+    <a href="../../EKL/Get%20Volume/" class="dropdown-item">Get Volume</a>
+</li>
+            
+<li>
+    <a href="../../EKL/How%20to%20know%20if%20an%20axis%20system%20is%20published%20in%20EKL/" class="dropdown-item">How to know if an axis system is published in EKL ?</a>
+</li>
+            
+<li>
+    <a href="../../EKL/InstantiateTemplate%202/" class="dropdown-item">InstantiateTemplate 2</a>
+</li>
+            
+<li>
+    <a href="../../EKL/KP%20Case/" class="dropdown-item">KP Case</a>
+</li>
+            
+<li>
+    <a href="../../EKL/KP%20V5/" class="dropdown-item">KP V5</a>
+</li>
+            
+<li>
+    <a href="../../EKL/KP%20V6%20Case%201/" class="dropdown-item">KP V6 Case 1</a>
+</li>
+            
+<li>
+    <a href="../../EKL/KP%20V6%20Case%202/" class="dropdown-item">KP V6 Case 2</a>
+</li>
+            
+<li>
+    <a href="../../EKL/KP-V6/" class="dropdown-item">KP</a>
+</li>
+            
+<li>
+    <a href="../../EKL/KP_%E5%85%A8%E5%B1%80ARM/" class="dropdown-item">arm 资源全局设置</a>
+</li>
+            
+<li>
+    <a href="../../EKL/ReadExcel/" class="dropdown-item">Read Excel</a>
+</li>
+            
+<li>
+    <a href="../../EKL/tunnel/" class="dropdown-item">Tunnel</a>
+</li>
+            
+<li>
+    <a href="../../EKL/udf%E4%BB%A5%E4%B8%8A%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%9C%E4%B8%BA%E5%8F%82%E8%80%83%E9%98%B5%E5%88%97/" class="dropdown-item">udf以上一个生成结果为参考阵列</a>
+</li>
+            
+<li>
+    <a href="../../EKL/%E6%A0%B9%E6%8D%AE%E5%90%8D%E7%A7%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%88%B0%E8%A3%85%E9%85%8D%E4%B8%AD/" class="dropdown-item">根据名称数据库中查找实例化到装配中</a>
+</li>
+            
+<li>
+    <a href="../../EKL/%E6%A0%B9%E6%8D%AE%E8%A1%A8%E6%A0%BC%E4%BF%AE%E6%94%B9%E5%AE%9E%E4%BE%8B%E5%90%8D%E7%A7%B0/" class="dropdown-item">根据表格修改实例名称</a>
+</li>
+            
+<li>
+    <a href="../../EKL/%E8%8E%B7%E5%BE%97%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E7%82%B9/" class="dropdown-item">获得最短距离点</a>
+</li>
+            
+<li>
+    <a href="../../EKL/%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E8%BD%B4%E7%B3%BB/" class="dropdown-item">表格生成轴系</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Creat Tree</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../EKL/Creat%20Tree/Creat%20Tree/" class="dropdown-item">Creat Tree</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">寻找几何图形集下的特征</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../EKL/%E5%AF%BB%E6%89%BE%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2%E9%9B%86%E4%B8%8B%E7%9A%84%E7%89%B9%E5%BE%81/Find%20features%20under%20a%20geometry%20set/" class="dropdown-item">Find features under a geometry set</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GIT</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../git/" class="dropdown-item">Git 使用帮助</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">45 个 Git 经典操作场景，专治不会合代码</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Python/CreateShortcut/" class="dropdown-item">Create Shortcut</a>
+</li>
+            
+<li>
+    <a href="../../Python/Python%20Script%20in%20Engineering%20Rules%20Capture/" class="dropdown-item">Python Script in Engineering Rules Capture</a>
+</li>
+            
+<li>
+    <a href="../../Python/autocapimg/" class="dropdown-item">自动翻页截图</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CATIA Emb Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Python/CATIA-Emb-Python/python/" class="dropdown-item">Python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PythonAutomation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Python/PythonAutomation/PythonAutomation/" class="dropdown-item">Python Automation</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">VBA</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../VBA/CreateBridgeSkeleton/" class="dropdown-item">Create Bridge Skeleton</a>
+</li>
+            
+<li>
+    <a href="../../VBA/CreatePointFromExcel/" class="dropdown-item">CreatePointFromExcel</a>
+</li>
+            
+<li>
+    <a href="../../VBA/DRW_DIME/" class="dropdown-item">DRW_DIME</a>
+</li>
+            
+<li>
+    <a href="../../VBA/Delete2DEle/" class="dropdown-item">Delete2D Object</a>
+</li>
+            
+<li>
+    <a href="../../VBA/GENERATE_DRW_PRD/" class="dropdown-item">GENERATE DRW PRD</a>
+</li>
+            
+<li>
+    <a href="../../VBA/ModifyUDFParamaters/" class="dropdown-item">第二个UDF的参数取值为上一个UDF的某个值</a>
+</li>
+            
+<li>
+    <a href="../../VBA/RenameTheDrawing/" class="dropdown-item">RenameTheDrawing</a>
+</li>
+            
+<li>
+    <a href="../../VBA/VBACallExE/" class="dropdown-item">vba call exe</a>
+</li>
+            
+<li>
+    <a href="../../VBA/%E6%9B%B4%E6%96%B0%E5%8F%82%E6%95%B0%E5%AF%BC%E5%87%BA%E6%88%AA%E5%9B%BE/" class="dropdown-item">更新参数导出截图</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">WIN</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../WIN/CMD%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%20xcopy/" class="dropdown-item">CMD文件复制 xcopy</a>
+</li>
+            
+<li>
+    <a href="../../WIN/CMD%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="dropdown-item">CMD install apps</a>
+</li>
+            
+<li>
+    <a href="../../WIN/GetFileName/" class="dropdown-item">打印所有文件名\print-file-name</a>
+</li>
+            
+<li>
+    <a href="../../WIN/GetMD5/" class="dropdown-item">获得文件的MD5码</a>
+</li>
+            
+<li>
+    <a href="../../WIN/UsefullApps/" class="dropdown-item">常用软件安装</a>
+</li>
+            
+<li>
+    <a href="../../WIN/%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%9B%91%E8%A7%86%E5%99%A8/" class="dropdown-item">查看系统监视器</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DIGITAL DESIGN <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kaleidoscope</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../DIGITAL-DESIGN/kaleidoscope/kaleidoscope/" class="dropdown-item">Kaleidoscope</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ENOVIA <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../ENOVIA/CleanNativeAppsCache/" class="dropdown-item">Clean native apps cache 清理缓存</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/Reset%20database%20password/" class="dropdown-item">重置数据库密码/Reset database password</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/rebuild%20search%20index/" class="dropdown-item">重建索引/Rebuild search index</a>
+</li>
+                                    
+<li>
+    <a href="../../../ENOVIA/%E9%87%8D%E7%BD%AE3DPassport%E9%87%8C%E9%9D%A2%E7%9A%84%E5%AF%86%E7%A0%81/" class="dropdown-item">重置3DPassport里面的密码/Reset password for 3dpassport</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Manage space permissions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/Manage%20space%20permissions/%E7%AE%A1%E7%90%86%E7%A9%BA%E9%97%B4%E6%9D%83%E9%99%90/" class="dropdown-item">管理空间权限/Manage space permissions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux r2022x</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/linux-r2022x/linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">平台部署</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/V6R2021x%20Platform%20Installation/" class="dropdown-item">V6R2021x Platform Installation</a>
+</li>
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/V6R2022x%20Platform%20Installation/" class="dropdown-item">V6R2022x Platform Installation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3DPassport</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2/3DPassport/3DPassport/" class="dropdown-item">3DPassport</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">移除license</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E7%A7%BB%E9%99%A4license/remove%20license/" class="dropdown-item">移除license</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">远程访问  Windows server 服务器</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ENOVIA/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%20%20Windows%20server%20%E6%9C%8D%E5%8A%A1%E5%99%A8/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%20%20Windows%20server%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="dropdown-item">远程访问  Windows server 服务器</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ISE AEC <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC FacadeResearch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ARC-FacadeResearch/facade%20research/" class="dropdown-item">Facade Research</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC Generali Tower</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ARC-Generali%20Tower/GenerailTower/" class="dropdown-item">GenerailTower</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ARC New Google Headquarters</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ARC-New%20Google%20Headquarters/New%20Google%20Headquarters/" class="dropdown-item">幕墙-New Google Headquarters</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">BRIDGE 小箱梁的自动删除</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/BRIDGE-%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/%E5%B0%8F%E7%AE%B1%E6%A2%81%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4/" class="dropdown-item">小箱梁的自动删除</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CASE 同济市路线数据转换</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/CASE-%E5%90%8C%E6%B5%8E%E5%B8%82%E8%B7%AF%E7%BA%BF%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/TJAD-%E5%90%8C%E6%B5%8E%E5%B8%82%E6%94%BF%E9%99%A2%E5%9F%BA%E4%BA%8E%E8%BE%BE%E7%B4%A2%E7%B3%BB%E7%BB%9F3DEXPERIENCE%E5%B9%B3%E5%8F%B0%E7%9A%84%E4%BA%8C%E4%B8%89%E7%BB%B4%E8%B7%AF%E7%BA%BF%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" class="dropdown-item">同济市政院基于达索系统3DEXPERIENCE平台的二三维路线数据转换程序开发</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CIV Tunnel R&D Process</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/CIV-Tunnel%20R%26D%20Process/Tunnel%20R%26D%20Process/" class="dropdown-item">隧道创建/Tunnel R&D Process</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ISE 钢结构</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/ISE-%E9%92%A2%E7%BB%93%E6%9E%84/%E9%92%A2%E7%BB%93%E6%9E%84%E6%A2%81/" class="dropdown-item">钢结构梁建模思考</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">SLN drafting</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../ISE-AEC/SLN-drafting/%E5%87%BA%E5%9B%BE/" class="dropdown-item">出图/Drafting Q&A</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../git/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../Python/CreateShortcut/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#45-git" class="nav-link">45 个 Git 经典操作场景，专治不会合代码</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">我刚才提交了什么?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commit-message" class="nav-link">我的提交信息(commit message)写错了</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commit" class="nav-link">我想从一个提交(commit)里移除一个文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commit_1" class="nav-link">我想删除我的的最后一次提交(commit)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commit_2" class="nav-link">删除任意提交(commit)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#amended-commit" class="nav-link">我尝试推一个修正后的提交(amended commit)到远程，但是报错：</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hard-reset" class="nav-link">我意外的做了一次硬重置(hard reset)，我想找回我的内容</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#staging" class="nav-link">暂存(Staging)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">我想把暂存的内容变成未暂存，把未暂存的内容暂存起来</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#unstaged" class="nav-link">未暂存(Unstaged)的内容</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">我想把未暂存的内容移动到一个新分支</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">我想把未暂存的内容移动到另一个已存在的分支</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#uncommitted-changes" class="nav-link">我想丢弃本地未提交的变化(uncommitted changes)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">我想丢弃某些未暂存的内容</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#answer-y-to-all-of-the-snippets-you-want-to-drop" class="nav-link">Answer y to all of the snippets you want to drop</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#branches" class="nav-link">分支(Branches)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">我从错误的分支拉取了内容，或把内容拉取到了错误的分支</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commit_3" class="nav-link">我想扔掉本地的提交(commit)，以便我的分支与远程的保持一致</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#main" class="nav-link">我需要提交到一个新分支，但错误的提交到了main</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ref-ish" class="nav-link">我想保留来自另外一个ref-ish的整个文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commit_4" class="nav-link">我把几个提交(commit)提交到了同一个分支，而这些提交应该分布在不同的分支里</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#upstream" class="nav-link">我想删除上游(upstream)分支被删除了的本地分支</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">我不小心删除了我的分支</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">我想删除一个分支</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#checkout" class="nav-link">我想从别人正在工作的远程分支签出(checkout)一个分支</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#rebasing-merging" class="nav-link">Rebasing 和合并(Merging)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#rebasemerge" class="nav-link">我想撤销rebase/merge</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rebase-force-push" class="nav-link">我已经rebase过, 但是我不想强推(force push)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#combinecommit" class="nav-link">我需要组合(combine)几个提交(commit)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commit_5" class="nav-link">我需要将一个分支合并成一个提交(commit)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#combineunpushed-commit" class="nav-link">我只想组合(combine)未推的提交(unpushed commit)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#stash" class="nav-link">Stash</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">暂存所有改动</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">暂存指定文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">使用某个指定暂存</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#miscellaneous-objects" class="nav-link">杂项(Miscellaneous Objects)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">克隆所有子模块</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tag" class="nav-link">删除标签(tag)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tag_1" class="nav-link">恢复已删除标签(tag)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#patch" class="nav-link">已删除补丁(patch)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">我只想改变一个文件名字的大小写，而不修改内容</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git" class="nav-link">我想从Git删除一个文件，但保留该文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gitalias" class="nav-link">我想给一些Git命令添加别名(alias)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#repository" class="nav-link">我想缓存一个仓库(repository)的用户名和密码</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">我不知道我做错了些什么</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="45-git">45 个 Git 经典操作场景，专治不会合代码</h1>
+<p>git对于大家应该都不太陌生，熟练使用git已经成为程序员的一项基本技能，尽管在工作中有诸如 Sourcetree这样牛X的客户端工具，使得合并代码变的很方便。但找工作面试和一些需彰显个人实力的场景，仍然需要我们掌握足够多的git命令。</p>
+<p>下边我们整理了45个日常用git合代码的经典操作场景，基本覆盖了工作中的需求。</p>
+<h2 id="_1">我刚才提交了什么?</h2>
+<p>如果你用 git commit -a 提交了一次变化(changes)，而你又不确定到底这次提交了哪些内容。你就可以用下面的命令显示当前HEAD上的最近一次的提交(commit):</p>
+<pre><code>(main)$ git show
+</code></pre>
+<p>或者</p>
+<pre><code>$ git log -n1 -p
+</code></pre>
+<h2 id="commit-message">我的提交信息(commit message)写错了</h2>
+<p>如果你的提交信息(commit message)写错了且这次提交(commit)还没有推(push), 你可以通过下面的方法来修改提交信息(commit message):</p>
+<pre><code>$ git commit --amend --only
+</code></pre>
+<p>这会打开你的默认编辑器, 在这里你可以编辑信息. 另一方面, 你也可以用一条命令一次完成:</p>
+<pre><code>$ git commit --amend --only -m 'xxxxxxx'
+</code></pre>
+<p>如果你已经推(push)了这次提交(commit), 你可以修改这次提交(commit)然后强推(force push), 但是不推荐这么做。</p>
+<p>我提交(commit)里的用户名和邮箱不对
+如果这只是单个提交(commit)，修改它：</p>
+<pre><code>$ git commit --amend --author "New Authorname &lt;authoremail@mydomain.com&gt;"
+</code></pre>
+<p>如果你需要修改所有历史, 参考 'git filter-branch'的指南页.</p>
+<h2 id="commit">我想从一个提交(commit)里移除一个文件</h2>
+<p>通过下面的方法，从一个提交(commit)里移除一个文件:</p>
+<pre><code>$ git checkout HEAD^ myfile
+$ git add -A
+$ git commit --amend
+</code></pre>
+<p>这将非常有用，当你有一个开放的补丁(open patch)，你往上面提交了一个不必要的文件，你需要强推(force push)去更新这个远程补丁。</p>
+<h2 id="commit_1">我想删除我的的最后一次提交(commit)</h2>
+<p>如果你需要删除推了的提交(pushed commits)，你可以使用下面的方法。可是，这会不可逆的改变你的历史，也会搞乱那些已经从该仓库拉取(pulled)了的人的历史。简而言之，如果你不是很确定，千万不要这么做。</p>
+<pre><code>$ git reset HEAD^ --hard
+$ git push -f [remote] [branch]
+</code></pre>
+<p>如果你还没有推到远程, 把Git重置(reset)到你最后一次提交前的状态就可以了(同时保存暂存的变化):</p>
+<pre><code>(my-branch*)$ git reset --soft HEAD@{1}
+</code></pre>
+<p>这只能在没有推送之前有用. 如果你已经推了, 唯一安全能做的是 git revert SHAofBadCommit， 那会创建一个新的提交(commit)用于撤消前一个提交的所有变化(changes)；或者, 如果你推的这个分支是rebase-safe的 (例如：其它开发者不会从这个分支拉), 只需要使用 git push -f。</p>
+<h2 id="commit_2">删除任意提交(commit)</h2>
+<p>同样的警告：不到万不得已的时候不要这么做.</p>
+<pre><code>$ git rebase --onto SHA1_OF_BAD_COMMIT^ SHA1_OF_BAD_COMMIT
+$ git push -f [remote] [branch]
+</code></pre>
+<p>或者做一个 交互式rebase 删除那些你想要删除的提交(commit)里所对应的行。</p>
+<h2 id="amended-commit">我尝试推一个修正后的提交(amended commit)到远程，但是报错：</h2>
+<pre><code>To https://github.com/yourusername/repo.git
+! [rejected]        mybranch -&gt; mybranch (non-fast-forward)
+error: failed to push some refs to 'https://github.com/tanay1337/webmaker.org.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+<p>注意, rebasing(见下面)和修正(amending)会用一个新的提交(commit)代替旧的, 所以如果之前你已经往远程仓库上推过一次修正前的提交(commit)，那你现在就必须强推(force push) (-f)。注意 – 总是 确保你指明一个分支!</p>
+<pre><code>(my-branch)$ git push origin mybranch -f
+</code></pre>
+<p>一般来说, 要避免强推. 最好是创建和推(push)一个新的提交(commit)，而不是强推一个修正后的提交。后者会使那些与该分支或该分支的子分支工作的开发者，在源历史中产生冲突。</p>
+<h2 id="hard-reset">我意外的做了一次硬重置(hard reset)，我想找回我的内容</h2>
+<p>如果你意外的做了 git reset --hard, 你通常能找回你的提交(commit), 因为Git对每件事都会有日志，且都会保存几天。</p>
+<pre><code>(main)$ git reflog
+</code></pre>
+<p>你将会看到一个你过去提交(commit)的列表, 和一个重置的提交。选择你想要回到的提交(commit)的SHA，再重置一次:</p>
+<pre><code>(main)$ git reset --hard SHA1234
+</code></pre>
+<p>这样就完成了。</p>
+<h2 id="staging">暂存(Staging)</h2>
+<p>我需要把暂存的内容添加到上一次的提交(commit)
+    (my-branch*)$ git commit --amend
+我想要暂存一个新文件的一部分，而不是这个文件的全部
+一般来说, 如果你想暂存一个文件的一部分, 你可这样做:</p>
+<pre><code>$ git add --patch filename.x
+</code></pre>
+<p>-p 简写。这会打开交互模式， 你将能够用 s 选项来分隔提交(commit)；然而, 如果这个文件是新的, 会没有这个选择， 添加一个新文件时, 这样做:</p>
+<pre><code>$ git add -N filename.x
+</code></pre>
+<p>然后, 你需要用 e 选项来手动选择需要添加的行，执行 git diff --cached 将会显示哪些行暂存了哪些行只是保存在本地了。</p>
+<p>我想把在一个文件里的变化(changes)加到两个提交(commit)里
+git add 会把整个文件加入到一个提交. git add -p 允许交互式的选择你想要提交的部分.</p>
+<h2 id="_2">我想把暂存的内容变成未暂存，把未暂存的内容暂存起来</h2>
+<p>多数情况下，你应该将所有的内容变为未暂存，然后再选择你想要的内容进行commit。但假定你就是想要这么做，这里你可以创建一个临时的commit来保存你已暂存的内容，然后暂存你的未暂存的内容并进行stash。然后reset最后一个commit将原本暂存的内容变为未暂存，最后stash pop回来。</p>
+<pre><code>$ git commit -m "WIP"
+$ git add .
+$ git stash
+$ git reset HEAD^
+$ git stash pop --index 0
+</code></pre>
+<p>注意1: 这里使用pop仅仅是因为想尽可能保持幂等。注意2: 假如你不加上--index你会把暂存的文件标记为为存储。</p>
+<h2 id="unstaged">未暂存(Unstaged)的内容</h2>
+<h2 id="_3">我想把未暂存的内容移动到一个新分支</h2>
+<pre><code>$ git checkout -b my-branch
+</code></pre>
+<h2 id="_4">我想把未暂存的内容移动到另一个已存在的分支</h2>
+<pre><code>$ git stash
+$ git checkout my-branch
+$ git stash pop
+</code></pre>
+<h2 id="uncommitted-changes">我想丢弃本地未提交的变化(uncommitted changes)</h2>
+<p>如果你只是想重置源(origin)和你本地(local)之间的一些提交(commit)，你可以：</p>
+<pre><code># one commit
+(my-branch)$ git reset --hard HEAD^
+# two commits
+(my-branch)$ git reset --hard HEAD^^
+# four commits
+(my-branch)$ git reset --hard HEAD~4
+# or
+(main)$ git checkout -f
+</code></pre>
+<p>重置某个特殊的文件, 你可以用文件名做为参数:</p>
+<pre><code>$ git reset filename
+</code></pre>
+<h2 id="_5">我想丢弃某些未暂存的内容</h2>
+<p>如果你想丢弃工作拷贝中的一部分内容，而不是全部。</p>
+<p>签出(checkout)不需要的内容，保留需要的。</p>
+<pre><code>$ git checkout -p
+</code></pre>
+<h1 id="answer-y-to-all-of-the-snippets-you-want-to-drop">Answer y to all of the snippets you want to drop</h1>
+<p>另外一个方法是使用 stash， Stash所有要保留下的内容, 重置工作拷贝, 重新应用保留的部分。</p>
+<pre><code>$ git stash -p
+# Select all of the snippets you want to save
+$ git reset --hard
+$ git stash pop
+</code></pre>
+<p>或者, stash 你不需要的部分, 然后stash drop。</p>
+<pre><code>$ git stash -p
+# Select all of the snippets you don't want to save
+$ git stash drop
+</code></pre>
+<h2 id="branches">分支(Branches)</h2>
+<h2 id="_6">我从错误的分支拉取了内容，或把内容拉取到了错误的分支</h2>
+<p>这是另外一种使用 git reflog 情况，找到在这次错误拉(pull) 之前HEAD的指向。</p>
+<pre><code>(main)$ git reflog
+ab7555f HEAD@{0}: pull origin wrong-branch: Fast-forward
+c5bc55a HEAD@{1}: checkout: checkout message goes here
+</code></pre>
+<p>重置分支到你所需的提交(desired commit):</p>
+<pre><code>$ git reset --hard c5bc55a
+</code></pre>
+<p>完成。</p>
+<h2 id="commit_3">我想扔掉本地的提交(commit)，以便我的分支与远程的保持一致</h2>
+<p>先确认你没有推(push)你的内容到远程。</p>
+<p>git status 会显示你领先(ahead)源(origin)多少个提交:</p>
+<pre><code>(my-branch)$ git status
+# On branch my-branch
+# Your branch is ahead of 'origin/my-branch' by 2 commits.
+#   (use "git push" to publish your local commits)
+#
+</code></pre>
+<p>一种方法是:</p>
+<pre><code>(main)$ git reset --hard origin/my-branch
+</code></pre>
+<h2 id="main">我需要提交到一个新分支，但错误的提交到了main</h2>
+<p>在main下创建一个新分支，不切换到新分支,仍在main下:</p>
+<pre><code>(main)$ git branch my-branch
+</code></pre>
+<p>把main分支重置到前一个提交:</p>
+<pre><code>(main)$ git reset --hard HEAD^
+</code></pre>
+<p>HEAD^ 是 HEAD^1 的简写，你可以通过指定要设置的HEAD来进一步重置。</p>
+<p>或者, 如果你不想使用 HEAD^, 找到你想重置到的提交(commit)的hash(git log 能够完成)， 然后重置到这个hash。使用git push 同步内容到远程。</p>
+<p>例如, main分支想重置到的提交的hash为a13b85e:</p>
+<pre><code>(main)$ git reset --hard a13b85e
+HEAD is now at a13b85e
+</code></pre>
+<p>签出(checkout)刚才新建的分支继续工作:</p>
+<pre><code>(main)$ git checkout my-branch
+</code></pre>
+<h2 id="ref-ish">我想保留来自另外一个ref-ish的整个文件</h2>
+<p>假设你正在做一个原型方案(原文为working spike (see note)), 有成百的内容，每个都工作得很好。现在, 你提交到了一个分支，保存工作内容:</p>
+<pre><code>(solution)$ git add -A &amp;&amp; git commit -m "Adding all changes from this spike into one big commit."
+</code></pre>
+<p>当你想要把它放到一个分支里 (可能是feature, 或者 develop), 你关心是保持整个文件的完整，你想要一个大的提交分隔成比较小。</p>
+<p>假设你有:</p>
+<p>分支 solution, 拥有原型方案， 领先 develop 分支。
+分支 develop, 在这里你应用原型方案的一些内容。
+我去可以通过把内容拿到你的分支里，来解决这个问题:</p>
+<pre><code>(develop)$ git checkout solution -- file1.txt
+</code></pre>
+<p>这会把这个文件内容从分支 solution 拿到分支 develop 里来:</p>
+<pre><code># On branch develop
+# Your branch is up-to-date with 'origin/develop'.
+# Changes to be committed:
+#  (use "git reset HEAD &lt;file&gt;..." to unstage)
+#
+#        modified:   file1.txt
+</code></pre>
+<p>然后, 正常提交。</p>
+<pre><code>Note: Spike solutions are made to analyze or solve the problem. These solutions are used for estimation and discarded once everyone gets clear visualization of the problem.
+</code></pre>
+<h2 id="commit_4">我把几个提交(commit)提交到了同一个分支，而这些提交应该分布在不同的分支里</h2>
+<p>假设你有一个main分支， 执行git log, 你看到你做过两次提交:</p>
+<pre><code>(main)$ git log
+
+commit e3851e817c451cc36f2e6f3049db528415e3c114
+Author: Alex Lee &lt;alexlee@example.com&gt;
+Date:   Tue Jul 22 15:39:27 2014 -0400
+
+    Bug #21 - Added CSRF protection
+
+commit 5ea51731d150f7ddc4a365437931cd8be3bf3131
+Author: Alex Lee &lt;alexlee@example.com&gt;
+Date:   Tue Jul 22 15:39:12 2014 -0400
+
+    Bug #14 - Fixed spacing on title
+
+commit a13b85e984171c6e2a1729bb061994525f626d14
+Author: Aki Rose &lt;akirose@example.com&gt;
+Date:   Tue Jul 21 01:12:48 2014 -0400
+
+First commit
+</code></pre>
+<p>让我们用提交hash(commit hash)标记bug (e3851e8 for #21, 5ea5173 for #14).</p>
+<p>首先, 我们把main分支重置到正确的提交(a13b85e):</p>
+<pre><code>(main)$ git reset --hard a13b85e
+HEAD is now at a13b85e
+</code></pre>
+<p>现在, 我们对 bug #21 创建一个新的分支:</p>
+<pre><code>(main)$ git checkout -b 21
+(21)$
+</code></pre>
+<p>接着, 我们用 cherry-pick 把对bug #21的提交放入当前分支。这意味着我们将应用(apply)这个提交(commit)，仅仅这一个提交(commit)，直接在HEAD上面。</p>
+<pre><code>(21)$ git cherry-pick e3851e8
+</code></pre>
+<p>这时候, 这里可能会产生冲突， 参见交互式 rebasing 章 冲突节 解决冲突.</p>
+<p>再者， 我们为bug #14 创建一个新的分支, 也基于main分支</p>
+<pre><code>(21)$ git checkout main
+(main)$ git checkout -b 14
+(14)$
+</code></pre>
+<p>最后, 为 bug #14 执行 cherry-pick:</p>
+<pre><code>(14)$ git cherry-pick 5ea5173
+</code></pre>
+<h2 id="upstream">我想删除上游(upstream)分支被删除了的本地分支</h2>
+<p>一旦你在github 上面合并(merge)了一个pull request, 你就可以删除你fork里被合并的分支。如果你不准备继续在这个分支里工作, 删除这个分支的本地拷贝会更干净，使你不会陷入工作分支和一堆陈旧分支的混乱之中（IDEA 中玩转 Git）。</p>
+<pre><code>$ git fetch -p
+</code></pre>
+<h2 id="_7">我不小心删除了我的分支</h2>
+<p>如果你定期推送到远程, 多数情况下应该是安全的，但有些时候还是可能删除了还没有推到远程的分支。让我们先创建一个分支和一个新的文件:</p>
+<pre><code>(main)$ git checkout -b my-branch
+(my-branch)$ git branch
+(my-branch)$ touch foo.txt
+(my-branch)$ ls
+README.md foo.txt
+</code></pre>
+<p>添加文件并做一次提交</p>
+<pre><code>(my-branch)$ git add .
+(my-branch)$ git commit -m 'foo.txt added'
+(my-branch)$ foo.txt added
+1 files changed, 1 insertions(+)
+create mode 100644 foo.txt
+(my-branch)$ git log
+
+commit 4e3cd85a670ced7cc17a2b5d8d3d809ac88d5012
+Author: siemiatj &lt;siemiatj@example.com&gt;
+Date:   Wed Jul 30 00:34:10 2014 +0200
+
+foo.txt added
+
+commit 69204cdf0acbab201619d95ad8295928e7f411d5
+Author: Kate Hudson &lt;katehudson@example.com&gt;
+Date:   Tue Jul 29 13:14:46 2014 -0400
+
+Fixes #6: Force pushing after amending commits
+</code></pre>
+<p>现在我们切回到主(main)分支，‘不小心的’删除my-branch分支</p>
+<pre><code>(my-branch)$ git checkout main
+Switched to branch 'main'
+Your branch is up-to-date with 'origin/main'.
+(main)$ git branch -D my-branch
+Deleted branch my-branch (was 4e3cd85).
+(main)$ echo oh noes, deleted my branch!
+oh noes, deleted my branch!
+</code></pre>
+<p>在这时候你应该想起了reflog, 一个升级版的日志，它存储了仓库(repo)里面所有动作的历史。</p>
+<pre><code>(main)$ git reflog
+69204cd HEAD@{0}: checkout: moving from my-branch to main
+4e3cd85 HEAD@{1}: commit: foo.txt added
+69204cd HEAD@{2}: checkout: moving from main to my-branch
+</code></pre>
+<p>正如你所见，我们有一个来自删除分支的提交hash(commit hash)，接下来看看是否能恢复删除了的分支。</p>
+<pre><code>(main)$ git checkout -b my-branch-help
+Switched to a new branch 'my-branch-help'
+(my-branch-help)$ git reset --hard 4e3cd85
+HEAD is now at 4e3cd85 foo.txt added
+(my-branch-help)$ ls
+README.md foo.txt
+</code></pre>
+<p>看! 我们把删除的文件找回来了。Git的 reflog 在rebasing出错的时候也是同样有用的。</p>
+<h2 id="_8">我想删除一个分支</h2>
+<p>删除一个远程分支:</p>
+<pre><code>(main)$ git push origin --delete my-branch
+</code></pre>
+<p>你也可以:</p>
+<pre><code>(main)$ git push origin :my-branch
+</code></pre>
+<p>删除一个本地分支:</p>
+<pre><code>(main)$ git branch -D my-branch
+</code></pre>
+<h2 id="checkout">我想从别人正在工作的远程分支签出(checkout)一个分支</h2>
+<p>首先, 从远程拉取(fetch) 所有分支:</p>
+<pre><code>(main)$ git fetch --all
+</code></pre>
+<p>假设你想要从远程的daves分支签出到本地的daves</p>
+<pre><code>(main)$ git checkout --track origin/daves
+Branch daves set up to track remote branch daves from origin.
+Switched to a new branch 'daves'
+(--track 是 git checkout -b [branch] [remotename]/[branch] 的简写)
+</code></pre>
+<p>这样就得到了一个daves分支的本地拷贝, 任何推过(pushed)的更新，远程都能看到.</p>
+<h1 id="rebasing-merging">Rebasing 和合并(Merging)</h1>
+<h2 id="rebasemerge">我想撤销rebase/merge</h2>
+<p>你可以合并(merge)或rebase了一个错误的分支, 或者完成不了一个进行中的rebase/merge。Git 在进行危险操作的时候会把原始的HEAD保存在一个叫ORIG_HEAD的变量里, 所以要把分支恢复到rebase/merge前的状态是很容易的。</p>
+<pre><code>(my-branch)$ git reset --hard ORIG_HEAD
+</code></pre>
+<h2 id="rebase-force-push">我已经rebase过, 但是我不想强推(force push)</h2>
+<p>不幸的是，如果你想把这些变化(changes)反应到远程分支上，你就必须得强推(force push)。是因你快进(Fast forward)了提交，改变了Git历史, 远程分支不会接受变化(changes)，除非强推(force push)。这就是许多人使用 merge 工作流, 而不是 rebasing 工作流的主要原因之一， 开发者的强推(force push)会使大的团队陷入麻烦。使用时需要注意，一种安全使用 rebase 的方法是，不要把你的变化(changes)反映到远程分支上, 而是按下面的做:</p>
+<pre><code>(main)$ git checkout my-branch
+(my-branch)$ git rebase -i main
+(my-branch)$ git checkout main
+(main)$ git merge --ff-only my-branch
+</code></pre>
+<h2 id="combinecommit">我需要组合(combine)几个提交(commit)</h2>
+<p>假设你的工作分支将会做对于 main 的pull-request。一般情况下你不关心提交(commit)的时间戳，只想组合 所有 提交(commit) 到一个单独的里面, 然后重置(reset)重提交(recommit)。确保主(main)分支是最新的和你的变化都已经提交了, 然后:</p>
+<pre><code>(my-branch)$ git reset --soft main
+(my-branch)$ git commit -am "New awesome feature"
+</code></pre>
+<p>如果你想要更多的控制, 想要保留时间戳, 你需要做交互式rebase (interactive rebase):</p>
+<pre><code>(my-branch)$ git rebase -i main
+</code></pre>
+<p>如果没有相对的其它分支， 你将不得不相对自己的HEAD 进行 rebase。例如：你想组合最近的两次提交(commit), 你将相对于HEAD~2 进行rebase， 组合最近3次提交(commit), 相对于HEAD~3, 等等。</p>
+<pre><code>(main)$ git rebase -i HEAD~2
+</code></pre>
+<p>在你执行了交互式 rebase的命令(interactive rebase command)后, 你将在你的编辑器里看到类似下面的内容:</p>
+<pre><code>pick a9c8a1d Some refactoring
+pick 01b2fd8 New awesome feature
+pick b729ad5 fixup
+pick e3851e8 another fix
+
+# Rebase 8074d12..b729ad5 onto 8074d12
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+</code></pre>
+<p>所有以 # 开头的行都是注释, 不会影响 rebase.</p>
+<p>然后，你可以用任何上面命令列表的命令替换 pick, 你也可以通过删除对应的行来删除一个提交(commit)。</p>
+<p>例如, 如果你想 单独保留最旧(first)的提交(commit),组合所有剩下的到第二个里面, 你就应该编辑第二个提交(commit)后面的每个提交(commit) 前的单词为 f:</p>
+<pre><code>pick a9c8a1d Some refactoring
+pick 01b2fd8 New awesome feature
+f b729ad5 fixup
+f e3851e8 another fix
+</code></pre>
+<p>如果你想组合这些提交(commit) 并重命名这个提交(commit), 你应该在第二个提交(commit)旁边添加一个r，或者更简单的用s 替代 f:</p>
+<pre><code>pick a9c8a1d Some refactoring
+pick 01b2fd8 New awesome feature
+s b729ad5 fixup
+s e3851e8 another fix
+</code></pre>
+<p>你可以在接下来弹出的文本提示框里重命名提交(commit)。</p>
+<pre><code>Newer, awesomer features
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# rebase in progress; onto 8074d12
+# You are currently editing a commit while rebasing branch 'main' on '8074d12'.
+#
+# Changes to be committed:
+#   modified:   README.md
+#
+</code></pre>
+<p>如果成功了, 你应该看到类似下面的内容:</p>
+<pre><code>(main)$ Successfully rebased and updated refs/heads/main.
+</code></pre>
+<p>安全合并(merging)策略
+--no-commit 执行合并(merge)但不自动提交, 给用户在做提交前检查和修改的机会。no-ff 会为特性分支(feature branch)的存在过留下证据, 保持项目历史一致（更多Git资料，参见IDEA 中如何完成 Git 版本回退？）。</p>
+<pre><code>(main)$ git merge --no-ff --no-commit my-branch
+</code></pre>
+<h2 id="commit_5">我需要将一个分支合并成一个提交(commit)</h2>
+<pre><code>(main)$ git merge --squash my-branch
+</code></pre>
+<h2 id="combineunpushed-commit">我只想组合(combine)未推的提交(unpushed commit)</h2>
+<p>有时候，在将数据推向上游之前，你有几个正在进行的工作提交(commit)。这时候不希望把已经推(push)过的组合进来，因为其他人可能已经有提交(commit)引用它们了。</p>
+<pre><code>(main)$ git rebase -i @{u}
+</code></pre>
+<p>这会产生一次交互式的rebase(interactive rebase), 只会列出没有推(push)的提交(commit)， 在这个列表时进行reorder/fix/squash 都是安全的。</p>
+<p>检查是否分支上的所有提交(commit)都合并(merge)过了
+检查一个分支上的所有提交(commit)是否都已经合并(merge)到了其它分支, 你应该在这些分支的head(或任何 commits)之间做一次diff:</p>
+<pre><code>(main)$ git log --graph --left-right --cherry-pick --oneline HEAD...feature/120-on-scroll
+</code></pre>
+<p>这会告诉你在一个分支里有而另一个分支没有的所有提交(commit), 和分支之间不共享的提交(commit)的列表。另一个做法可以是:</p>
+<pre><code>(main)$ git log main ^feature/120-on-scroll --no-merges
+</code></pre>
+<p>交互式rebase(interactive rebase)可能出现的问题
+这个rebase 编辑屏幕出现'noop'
+如果你看到的是这样:</p>
+<pre><code>noop
+</code></pre>
+<p>这意味着你rebase的分支和当前分支在同一个提交(commit)上, 或者 领先(ahead) 当前分支。你可以尝试:</p>
+<p>检查确保主(main)分支没有问题
+rebase  HEAD~2 或者更早
+有冲突的情况
+如果你不能成功的完成rebase, 你可能必须要解决冲突。</p>
+<p>首先执行 git status 找出哪些文件有冲突:</p>
+<pre><code>(my-branch)$ git status
+On branch my-branch
+Changes not staged for commit:
+(use "git add &lt;file&gt;..." to update what will be committed)
+(use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+modified:   README.md
+</code></pre>
+<p>在这个例子里面, README.md 有冲突。打开这个文件找到类似下面的内容:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+some code
+=========
+some code
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; new-commit
+</code></pre>
+<p>你需要解决新提交的代码(示例里, 从中间==线到new-commit的地方)与HEAD 之间不一样的地方.</p>
+<p>有时候这些合并非常复杂，你应该使用可视化的差异编辑器(visual diff editor):</p>
+<pre><code>(main*)$ git mergetool -t opendiff
+</code></pre>
+<p>在你解决完所有冲突和测试过后, git add 变化了的(changed)文件, 然后用git rebase --continue 继续rebase。</p>
+<pre><code>(my-branch)$ git add README.md
+(my-branch)$ git rebase --continue
+</code></pre>
+<p>如果在解决完所有的冲突过后，得到了与提交前一样的结果, 可以执行git rebase --skip。</p>
+<p>任何时候你想结束整个rebase 过程，回来rebase前的分支状态, 你可以做:</p>
+<pre><code>(my-branch)$ git rebase --abort
+</code></pre>
+<h1 id="stash">Stash</h1>
+<h2 id="_9">暂存所有改动</h2>
+<p>暂存你工作目录下的所有改动</p>
+<pre><code>$ git stash
+</code></pre>
+<p>你可以使用-u来排除一些文件</p>
+<pre><code>$ git stash -u
+</code></pre>
+<h2 id="_10">暂存指定文件</h2>
+<p>假设你只想暂存某一个文件</p>
+<pre><code>$ git stash push working-directory-path/filename.ext
+</code></pre>
+<p>假设你想暂存多个文件</p>
+<pre><code>$ git stash push working-directory-path/filename1.ext working-directory-path/filename2.ext
+</code></pre>
+<p>暂存时记录消息
+这样你可以在list时看到它</p>
+<pre><code>$ git stash save &lt;message&gt;
+</code></pre>
+<p>或</p>
+<pre><code>$ git stash push -m &lt;message&gt;
+</code></pre>
+<h2 id="_11">使用某个指定暂存</h2>
+<p>首先你可以查看你的stash记录</p>
+<pre><code>$ git stash list
+</code></pre>
+<p>然后你可以apply某个stash</p>
+<pre><code>$ git stash apply "stash@{n}"
+</code></pre>
+<p>此处， 'n'是stash在栈中的位置，最上层的stash会是0</p>
+<p>除此之外，也可以使用时间标记(假如你能记得的话)。</p>
+<pre><code>$ git stash apply "stash@{2.hours.ago}"
+</code></pre>
+<p>暂存时保留未暂存的内容
+你需要手动create一个stash commit， 然后使用git stash store。</p>
+<pre><code>$ git stash create
+$ git stash store -m "commit-message" CREATED_SHA1
+</code></pre>
+<h1 id="miscellaneous-objects">杂项(Miscellaneous Objects)</h1>
+<h2 id="_12">克隆所有子模块</h2>
+<pre><code>$ git clone --recursive git://github.com/foo/bar.git
+</code></pre>
+<p>如果已经克隆了:</p>
+<pre><code>$ git submodule update --init --recursive
+</code></pre>
+<h2 id="tag">删除标签(tag)</h2>
+<pre><code>$ git tag -d &lt;tag_name&gt;
+$ git push &lt;remote&gt; :refs/tags/&lt;tag_name&gt;
+</code></pre>
+<h2 id="tag_1">恢复已删除标签(tag)</h2>
+<p>如果你想恢复一个已删除标签(tag), 可以按照下面的步骤: 首先, 需要找到无法访问的标签(unreachable tag):</p>
+<pre><code>$ git fsck --unreachable | grep tag
+</code></pre>
+<p>记下这个标签(tag)的hash，然后用Git的 update-ref</p>
+<pre><code>$ git update-ref refs/tags/&lt;tag_name&gt; &lt;hash&gt;
+</code></pre>
+<p>这时你的标签(tag)应该已经恢复了。</p>
+<h2 id="patch">已删除补丁(patch)</h2>
+<p>如果某人在 GitHub 上给你发了一个pull request, 但是然后他删除了他自己的原始 fork, 你将没法克隆他们的提交(commit)或使用 git am。在这种情况下, 最好手动的查看他们的提交(commit)，并把它们拷贝到一个本地新分支，然后做提交。</p>
+<p>做完提交后, 再修改作者，参见变更作者。然后, 应用变化, 再发起一个新的pull request。</p>
+<p>跟踪文件(Tracking Files)</p>
+<h2 id="_13">我只想改变一个文件名字的大小写，而不修改内容</h2>
+<pre><code>(main)$ git mv --force myfile MyFile
+</code></pre>
+<h2 id="git">我想从Git删除一个文件，但保留该文件</h2>
+<pre><code>(main)$ git rm --cached log.txt
+</code></pre>
+<p>配置(Configuration)</p>
+<h2 id="gitalias">我想给一些Git命令添加别名(alias)</h2>
+<p>在 OS X 和 Linux 下, 你的 Git的配置文件储存在 ~/.gitconfig。我在[alias] 部分添加了一些快捷别名(和一些我容易拼写错误的)，如下:</p>
+<pre><code>[alias]
+    a = add
+    amend = commit --amend
+    c = commit
+    ca = commit --amend
+    ci = commit -a
+    co = checkout
+    d = diff
+    dc = diff --changed
+    ds = diff --staged
+    f = fetch
+    loll = log --graph --decorate --pretty=oneline --abbrev-commit
+    m = merge
+    one = log --pretty=oneline
+    outstanding = rebase -i @{u}
+    s = status
+    unpushed = log @{u}
+    wc = whatchanged
+    wip = rebase -i @{u}
+    zap = fetch -p
+</code></pre>
+<h2 id="repository">我想缓存一个仓库(repository)的用户名和密码</h2>
+<p>你可能有一个仓库需要授权，这时你可以缓存用户名和密码，而不用每次推/拉(push/pull)的时候都输入，Credential helper能帮你。</p>
+<pre><code>$ git config --global credential.helper cache
+# Set git to use the credential memory cache
+$ git config --global credential.helper 'cache --timeout=3600'
+# Set the cache to timeout after 1 hour (setting is in seconds)
+</code></pre>
+<h2 id="_14">我不知道我做错了些什么</h2>
+<p>你把事情搞砸了：你 重置(reset) 了一些东西, 或者你合并了错误的分支, 亦或你强推了后找不到你自己的提交(commit)了。有些时候, 你一直都做得很好, 但你想回到以前的某个状态。</p>
+<p>这就是 git reflog 的目的， reflog 记录对分支顶端(the tip of a branch)的任何改变, 即使那个顶端没有被任何分支或标签引用。基本上, 每次HEAD的改变, 一条新的记录就会增加到reflog。遗憾的是，这只对本地分支起作用，且它只跟踪动作 (例如，不会跟踪一个没有被记录的文件的任何改变)。</p>
+<pre><code>(main)$ git reflog
+0a2e358 HEAD@{0}: reset: moving to HEAD~2
+0254ea7 HEAD@{1}: checkout: moving from 2.2 to main
+c10f740 HEAD@{2}: checkout: moving from main to 2.2
+</code></pre>
+<p>上面的reflog展示了从main分支签出(checkout)到2.2 分支，然后再签回。那里，还有一个硬重置(hard reset)到一个较旧的提交。最新的动作出现在最上面以 HEAD@{0}标识.</p>
+<p>如果事实证明你不小心回移(move back)了提交(commit), reflog 会包含你不小心回移前main上指向的提交(0254ea7)。</p>
+<pre><code>$ git reset --hard 0254ea7
+</code></pre>
+<p>然后使用git reset就可以把main改回到之前的commit，这提供了一个在历史被意外更改情况下的安全网。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
