@@ -708,6 +708,41 @@ if__name__=='__main__':
 print()
 
 
+</code></pre>
+<pre><code class="language-vb">
+
+Sub main()
+
+Set Part = CATIA.ActiveDocument.Part
+Set obj = CATIA.ActiveDocument.Selection.Item(1).Value
+
+icount = obj.HybridShapes.Count
+
+For i = 1 To 9
+
+    Set udf1 = obj.HybridShapes.Item(i)
+    Set udf2 = obj.HybridShapes.Item(i + 1)
+
+    Set parms1 = Part.Parameters.SubList(udf1, True)
+    Set parms2 = Part.Parameters.SubList(udf2, True)
+
+    Dim parm1 As Parameter
+    Dim parm2 As Parameter
+
+    Set parm1 = parms1.Item(5)
+    Set parm2 = parms2.Item(4)
+
+    Dim s1 As String
+    s1 = parm1.ValueAsString()
+    parm2.ValuateFromString s1
+
+    Part.Update
+
+
+Next
+
+End Sub
+
 </code></pre></div>
             </div>
         </div>
