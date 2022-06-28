@@ -705,9 +705,9 @@
                     <div class="col-md-9" role="main">
 
 <h2 id="case1">case1</h2>
-<p>The following example creates a drawing angle dimension between two lines and a partial curvilinear length dimension on an ellipse and retrieved in MyDimension1 and MyDimension2 in the drawing view collection of the MyView drawing view. This view belongs to the drawing view collection of the drawing sheet
- <code>vb
- Dim MyView As DrawingView
+<p>The following example creates a drawing angle dimension between two lines and a partial curvilinear length dimension on an ellipse and retrieved in MyDimension1 and MyDimension2 in the drawing view collection of the MyView drawing view. This view belongs to the drawing view collection of the drawing sheet</p>
+<p>```vb</p>
+<p>Dim MyView As DrawingView
  Set MyView = MySheet.Views.ActiveView
  Dim Fact2D  As Factory2D
  Set Fact2D = MyView.Factory2D
@@ -734,7 +734,8 @@
  myElements2(2) = Array(Point1,Point2,Ellipse1)
  selpoints(3) = Array(0, 0, 0, 0)
  Dim MyDimension2 As DrawingDimension
- Set MyDimension2 = MyView.Dimensions.Add(iType, myElements2(1), selpoints(3),catDimOffset)</code></p>
+ Set MyDimension2 = MyView.Dimensions.Add(iType, myElements2(1), selpoints(3),catDimOffset)</p>
+<p>```</p>
 <p>## case2</p>
 <p>```vb</p>
 <p>Dim MyView As DrawingView
