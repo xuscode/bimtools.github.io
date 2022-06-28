@@ -262,6 +262,10 @@
 </li>
             
 <li>
+    <a href="../../../CODE/EKL/EKL%20%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8DPart/" class="dropdown-item">EKL 获得当前Part</a>
+</li>
+            
+<li>
     <a href="../../../CODE/EKL/EKL%E8%AF%8D%E5%85%B8/" class="dropdown-item">EKL词典</a>
 </li>
             
@@ -697,6 +701,10 @@
             
             <li class="nav-item" data-level="1"><a href="#tunnel-rd-process" class="nav-link">隧道创建/Tunnel R&amp;D Process</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ds-code" class="nav-link">DS CODE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -718,7 +726,80 @@
 <li>厚度参数</li>
 </ul>
 </li>
-</ul></div>
+</ul>
+<h2 id="ds-code">DS CODE</h2>
+<pre><code class="language-java">
+
+Let i (Integer)
+Let obj1 (Feature)
+Let Axs (AxisSystem)
+Let Agl (ANGLE)
+i=1
+
+let rootFeat(PartFeature)
+let repRef(VPMRepReference)
+
+let temp(Feature)
+let Destination_Body(BodyFeature)
+let testangle(ANGLE)
+
+repRef=GetPLMOwner(`xy 平面` )
+rootFeat=repRef-&gt;Find(&quot;PartFeature&quot;,&quot;&quot;,TRUE)
+Destination_Body=new(&quot;OpenBodyFeature&quot;,&quot;UDF_Rings&quot;,rootFeat)
+
+For i while i&lt;=int(length(`对齐集.2\对齐.2\3D 对齐.1`,First_Axis\First_Ring_Position ,Pattern_Limit\Last_Ring_Limit  )/((2*Lmax-p )/2 ))
+{
+    set obj1 = CreateOrModifyTemplate(&quot;Resource1&quot;, Destination_Body  ,`关系\KP_Rings_Instantiation\列表.1`    , i )
+
+    if i==1 
+    {
+        obj1-&gt;SetAttributeObject (&quot;Axis System&quot;,`First_Axis\轴系.984`    ) 
+        obj1-&gt;SetAttributeObject (&quot;3D_Alignment&quot;,`对齐集.2\对齐.2\3D 对齐.1`    ) 
+
+        obj1-&gt;SetAttributeDimension(&quot;Rotation_computed_from_previous_ring&quot;, 0deg,&quot;ANGLE&quot;)
+        obj1-&gt;SetAttributeDimension(&quot;Lmax&quot;,Lmax   ,&quot;LENGTH&quot;)    
+        obj1-&gt;SetAttributeDimension(&quot;p&quot;,p   ,&quot;LENGTH&quot;) 
+        obj1-&gt;SetAttributeDimension(&quot;Thickness&quot;, Thickness   ,&quot;LENGTH&quot;)     
+        obj1-&gt;SetAttributeReal(&quot;Coef&quot;,Coef ) 
+        obj1-&gt;SetAttributeDimension(&quot;Radius&quot;,Radius  ,&quot;LENGTH&quot;) 
+
+    }
+
+    else
+    {
+        obj1-&gt;SetAttributeObject (&quot;Axis System&quot;,Axs   ) 
+        obj1-&gt;SetAttributeObject (&quot;3D_Alignment&quot;,`对齐集.2\对齐.2\3D 对齐.1`    )  
+
+        obj1-&gt;SetAttributeDimension(&quot;Radius&quot;,Radius  ,&quot;LENGTH&quot;) 
+        obj1-&gt;SetAttributeDimension(&quot;Lmax&quot;,Lmax   ,&quot;LENGTH&quot;)    
+        obj1-&gt;SetAttributeDimension(&quot;p&quot;,p   ,&quot;LENGTH&quot;) 
+        obj1-&gt;SetAttributeDimension(&quot;Thickness&quot;, Thickness   ,&quot;LENGTH&quot;)     
+        obj1-&gt;SetAttributeDimension(&quot;Rotation_computed_from_previous_ring&quot;, Agl  ,&quot;ANGLE&quot;) 
+        obj1-&gt;SetAttributeReal(&quot;Coef&quot;,Coef ) 
+    }
+
+    EndModifyTemplate(obj1)
+
+    obj1.Name=&quot;Ring #&quot;+ToString(i) 
+
+    Axs=obj1-&gt;GetAttributeObject(&quot;Output_Axis_System&quot;)
+    testangle=obj1-&gt;GetAttributeReal(&quot;Angle_for_next_ring&quot;)
+
+    /* we force a 30deg angle betwen 2 rings to avoid having the keystone ring segment at the same position between 2 consecutive rings */  
+
+    if testangle&lt; 30 deg        
+        Agl= (testangle+30deg)*180deg/PI 
+    else if testangle&gt; 330 deg 
+        Agl= (testangle-30deg)*180deg/PI
+    else
+        Agl=testangle
+    /*Notify(&quot;angle #&quot;,Agl)*/
+
+    i = i +1
+
+}
+
+</code></pre></div>
             </div>
         </div>
 
