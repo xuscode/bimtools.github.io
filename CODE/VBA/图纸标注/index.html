@@ -710,57 +710,59 @@
 
 <h2 id="case1">case1</h2>
 <p>The following example creates a drawing angle dimension between two lines and a partial curvilinear length dimension on an ellipse and retrieved in MyDimension1 and MyDimension2 in the drawing view collection of the MyView drawing view. This view belongs to the drawing view collection of the drawing sheet</p>
-<p>```vb</p>
-<p>Dim MyView As DrawingView
- Set MyView = MySheet.Views.ActiveView
- Dim Fact2D  As Factory2D
- Set Fact2D = MyView.Factory2D
- Dim Line1 As Line2D
- Dim Line2 As Line2D
- Set Line1 = Fact2D.CreateLine(50, 10, 150, 10)
- Set Line2 = Fact2D.CreateLine(50, 10, 120, 100)
- Dim Ellipse1 As Ellipse2D
- Set Ellipse1 = Fact2D.CreateEllipse(-40, 100, 120, 180,120,90,0, 3)
- Dim Point1 As Point2D
- Dim Point2 As Point2D
- Set Point1 = Fact2D.CreatePoint(-10,190)
- Set Point2 = Fact2D.CreatePoint(-120,90)
- Dim iType As catDimType
- iType = catDimAngle
- Dim myElements1(1)
- myElements1(1) = Array(Line1,Line2)
- Dim selpoints(3)
- selpoints(3) = Array(150, 10, 120, 100)
- Dim MyDimension1 As DrawingDimension
- Set MyDimension1 = MyView.Dimensions.Add(iType, myElements1(1), selpoints(3),catDimAuto)
- iType = catDimLengthCurvilinear
- Dim myElements2(2)
- myElements2(2) = Array(Point1,Point2,Ellipse1)
- selpoints(3) = Array(0, 0, 0, 0)
- Dim MyDimension2 As DrawingDimension
- Set MyDimension2 = MyView.Dimensions.Add(iType, myElements2(1), selpoints(3),catDimOffset)</p>
-<p>```</p>
+<pre><code class="language-vb">
+Dim MyView As DrawingView
+Set MyView = MySheet.Views.ActiveView
+Dim Fact2D  As Factory2D
+Set Fact2D = MyView.Factory2D
+Dim Line1 As Line2D
+Dim Line2 As Line2D
+Set Line1 = Fact2D.CreateLine(50, 10, 150, 10)
+Set Line2 = Fact2D.CreateLine(50, 10, 120, 100)
+Dim Ellipse1 As Ellipse2D
+Set Ellipse1 = Fact2D.CreateEllipse(-40, 100, 120, 180,120,90,0, 3)
+Dim Point1 As Point2D
+Dim Point2 As Point2D
+Set Point1 = Fact2D.CreatePoint(-10,190)
+Set Point2 = Fact2D.CreatePoint(-120,90)
+Dim iType As catDimType
+iType = catDimAngle
+Dim myElements1(1)
+myElements1(1) = Array(Line1,Line2)
+Dim selpoints(3)
+selpoints(3) = Array(150, 10, 120, 100)
+Dim MyDimension1 As DrawingDimension
+Set MyDimension1 = MyView.Dimensions.Add(iType, myElements1(1), selpoints(3),catDimAuto)
+iType = catDimLengthCurvilinear
+Dim myElements2(2)
+myElements2(2) = Array(Point1,Point2,Ellipse1)
+selpoints(3) = Array(0, 0, 0, 0)
+Dim MyDimension2 As DrawingDimension
+Set MyDimension2 = MyView.Dimensions.Add(iType, myElements2(1), selpoints(3),catDimOffset)
+
+</code></pre>
 <p>## case2</p>
-<p>```vb</p>
-<p>Dim MyView As DrawingView
- Set MyView = MySheet.Views.ActiveView
- Dim Fact2D  As Factory2D
- Set Fact2D = MyView.Factory2D
- Dim Point1 As Point2D
- Dim Point2 As Point2D
- Set Point1 = Fact2D.CreatePoint(40, 230)
- Set Point2 = Fact2D.CreatePoint(80, 210)
- Dim Line1 As Line2D
- Set Line1 = Fact2D.CreateLine(50, 10, 150, 10)
- Dim iType As catDimType
- iType = catDimDistance
- Dim myElements(1)
- myElements(1) = Array(Point1,Point2)
- Dim selpoints(3)
- selpoints(3) = Array(0, 0, 0, 0)
- Dim MyDimension As DrawingDimension
- Set MyDimension = MyView.Dimensions.Add2(iType, myElements(1), selpoints(3), Line1, 0)</p>
-<p>```</p></div>
+<pre><code class="language-vb">
+Dim MyView As DrawingView
+Set MyView = MySheet.Views.ActiveView
+Dim Fact2D  As Factory2D
+Set Fact2D = MyView.Factory2D
+Dim Point1 As Point2D
+Dim Point2 As Point2D
+Set Point1 = Fact2D.CreatePoint(40, 230)
+Set Point2 = Fact2D.CreatePoint(80, 210)
+Dim Line1 As Line2D
+Set Line1 = Fact2D.CreateLine(50, 10, 150, 10)
+Dim iType As catDimType
+iType = catDimDistance
+Dim myElements(1)
+myElements(1) = Array(Point1,Point2)
+Dim selpoints(3)
+selpoints(3) = Array(0, 0, 0, 0)
+Dim MyDimension As DrawingDimension
+Set MyDimension = MyView.Dimensions.Add2(iType, myElements(1), selpoints(3), Line1, 0)
+
+</code></pre></div>
             </div>
         </div>
 
