@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>EKL 获得当前Part - Knowledge Base</title>
+        <title>EKL 获得当前根节点 - Knowledge Base</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -262,7 +262,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">EKL 获得当前Part</a>
+    <a href="./" class="dropdown-item active">EKL 获得当前根节点</a>
 </li>
             
 <li>
@@ -429,6 +429,10 @@
             
 <li>
     <a href="../../VBA/GetPart/" class="dropdown-item">Get Part</a>
+</li>
+            
+<li>
+    <a href="../../VBA/InstanciatePowerCopy/" class="dropdown-item">InstanciatePowerCopy</a>
 </li>
             
 <li>
@@ -699,7 +703,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#ekl-part" class="nav-link">EKL 获得当前Part</a>
+            <li class="nav-item" data-level="1"><a href="#ekl" class="nav-link">EKL 获得当前根节点</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#occurrence" class="nav-link">获取根节点为Occurrence</a>
               <ul class="nav flex-column">
@@ -713,7 +717,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#ekl-part_1" class="nav-link">EKL 获得当前Part</a>
+            <li class="nav-item" data-level="2"><a href="#ekl-part" class="nav-link">EKL 获得当前Part</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -724,7 +728,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="ekl-part">EKL 获得当前Part</h1>
+<h1 id="ekl">EKL 获得当前根节点</h1>
 <h2 id="occurrence">获取根节点为Occurrence</h2>
 <pre><code class="language-java">
 let root(ProductOccurrence)
@@ -746,7 +750,7 @@ let predicate  = &quot;&quot;
 allOccurrences = root.Query(&quot;ProductOccurrence&quot;, &quot;&quot;)
 
 </code></pre>
-<h2 id="ekl-part_1">EKL 获得当前Part</h2>
+<h2 id="ekl-part">EKL 获得当前Part</h2>
 <p>通过当前文件的 xyplane 来获得part container</p>
 <pre><code class="language-java">
 let rootFeat(PartFeature)
