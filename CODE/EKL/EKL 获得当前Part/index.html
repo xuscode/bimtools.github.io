@@ -701,6 +701,22 @@
             
             <li class="nav-item" data-level="1"><a href="#ekl-part" class="nav-link">EKL 获得当前Part</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#occurrence" class="nav-link">获取根节点为Occurrence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#vpmreference" class="nav-link">获取根节点为VPMReference</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#occurrence_1" class="nav-link">获取所有occurrence下的内容</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ekl-part_1" class="nav-link">EKL 获得当前Part</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -709,13 +725,33 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="ekl-part">EKL 获得当前Part</h1>
+<h2 id="occurrence">获取根节点为Occurrence</h2>
+<pre><code class="language-java">
+let root(ProductOccurrence)
+root = GetEditorRootOccurrences(&quot;ProductOccurrence&quot;).GetItem(1)
+
+</code></pre>
+<h2 id="vpmreference">获取根节点为VPMReference</h2>
+<pre><code class="language-java">
+let root(VPMReference)
+root = GetEditorRoots(&quot;VPMReference&quot;).GetItem(1)
+
+</code></pre>
+<h2 id="occurrence_1">获取所有occurrence下的内容</h2>
+<pre><code class="language-java">
+let root(ProductOccurrence)
+root = GetEditorRootOccurrences(&quot;ProductOccurrence&quot;).GetItem(1)
+let allOccurrences(List)
+let predicate  = &quot;&quot;
+allOccurrences = root.Query(&quot;ProductOccurrence&quot;, &quot;&quot;)
+
+</code></pre>
+<h2 id="ekl-part_1">EKL 获得当前Part</h2>
 <p>通过当前文件的 xyplane 来获得part container</p>
 <pre><code class="language-java">
-
 let rootFeat(PartFeature)
 let repRef(VPMRepReference)
 let Destination_Body(BodyFeature)
-
 
 repRef=GetPLMOwner(`xy 平面` )
 rootFeat=repRef-&gt;Find(&quot;PartFeature&quot;,&quot;&quot;,TRUE)
